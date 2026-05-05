@@ -201,11 +201,6 @@
 .preview-card__media {
   aspect-ratio: 4 / 3;
   border-radius: 18px;
-  border: 1px solid var(--color-gray-200);
-  background-color: var(--color-gray-soft);
-  background-image: linear-gradient(135deg,
-    var(--color-gray-100) 0%,
-    var(--color-gray-200) 100%);
   overflow: hidden;
 }
 
@@ -213,8 +208,8 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;     /* show the whole image; works for any aspect ratio */
-  object-position: center; /* center inside the 4:3 frame */
+  object-fit: cover;       /* fill the card; crop overflow as needed */
+  object-position: center;
   transition: transform 0.5s var(--ease);
   pointer-events: none;    /* prevent native image drag from blocking the track drag */
 }

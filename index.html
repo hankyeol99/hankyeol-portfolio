@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Hankyeol Kim - Product Designer Portfolio</title>
+  <meta name="description" content="사용자 경험을 중심으로 서비스의 흐름과 목적을 파악해 최선의 인터페이스를 설계하는 프로덕트 디자이너 김한결의 포트폴리오.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/webclip.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <div class="page">
+    <!-- ============================
+         Navbar
+         ============================ -->
+    <header class="navbar" data-navbar>
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__logo-link" aria-label="홈">
+          <span class="brand">
+            <span class="brand__name">Hankyeol Kim</span>
+            <span class="brand__role">Product Designer</span>
+          </span>
+        </a>
+
+        <nav class="navbar__menu" data-navbar-menu aria-label="주요 메뉴">
+          <a href="#projects"  class="navbar__link">Project</a>
+          <a href="#about"     class="navbar__link">About</a>
+          <!-- <a href="#experience" class="navbar__link">Experience</a> -->
+        </nav>
+        <button type="button" class="button button--navbar navbar__cta" data-contact-trigger>Contact</button>
+
+        <button type="button" class="navbar__toggle" data-navbar-toggle aria-label="메뉴 열기">
+          <span class="navbar__toggle-icon"><span></span></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- ============================
+           Hero
+           ============================ -->
+      <section class="hero">
+        <div class="hero__inner">
+          <h1 class="heading-h1 reveal">Product Designer Portfolio</h1>
+          <p class="hero__description reveal" style="--reveal-delay: 0.1s">
+            사용자 경험을 중심으로 서비스의 흐름과 목적을 파악해 최선의 인터페이스를 설계하는 디자이너 김한결 입니다.
+          </p>
+          <div class="hero__meta reveal" style="--reveal-delay: 0.2s">
+            <p class="hero__meta-disciplines">Product Design · UX/UI · Web Design</p>
+            <p>B2B SaaS Console / Landing Page / Mobile App</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================
+           Design Preview (TEMPORARILY HIDDEN — uncomment the block below
+           to bring it back.)
+           ============================ -->
+      <!--
+      <section class="design-preview" id="design-preview" data-carousel>
+        <div class="design-preview__container">
+          <header class="design-preview__header reveal">
+            <div class="design-preview__intro">
+              <h2 class="design-preview__title">Design Preview</h2>
+              <p class="design-preview__sub">A curated preview of selected interfaces, layouts, and visual details from my work.</p>
+            </div>
+            <div class="design-preview__nav" aria-label="Design preview controls">
+              <button type="button" class="design-preview__btn" data-carousel-prev aria-label="이전 카드">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button type="button" class="design-preview__btn" data-carousel-next aria-label="다음 카드">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </header>
+        </div>
+
+        <div class="design-preview__viewport">
+          <ul class="design-preview__track" data-carousel-track>
+            <li class="preview-card">
+              <div class="preview-card__media">
+                <img src="assets/preview/preview-01.jpg" alt="SaaS console interface preview" class="preview-card__image" loading="lazy" draggable="false">
+              </div>
+              <span class="preview-card__label">SaaS Console</span>
+            </li>
+            <li class="preview-card">
+              <div class="preview-card__media">
+                <img src="assets/preview/preview-02.jpg" alt="Mobile app screen design preview" class="preview-card__image" loading="lazy" draggable="false">
+              </div>
+              <span class="preview-card__label">Mobile App</span>
+            </li>
+            <li class="preview-card">
+              <div class="preview-card__media">
+                <img src="assets/preview/preview-03.jpg" alt="Landing page design preview" class="preview-card__image" loading="lazy" draggable="false">
+              </div>
+              <span class="preview-card__label">Landing Page</span>
+            </li>
+            <li class="preview-card">
+              <div class="preview-card__media">
+                <img src="assets/preview/preview-04.jpg" alt="Dashboard layout preview" class="preview-card__image" loading="lazy" draggable="false">
+              </div>
+              <span class="preview-card__label">Dashboard</span>
+            </li>
+            <li class="preview-card">
+              <div class="preview-card__media">
+                <img src="assets/preview/preview-05.jpg" alt="UI detail close-up" class="preview-card__image" loading="lazy" draggable="false">
+              </div>
+              <span class="preview-card__label">UI Detail</span>
+            </li>
+            <li class="preview-card">
+              <div class="preview-card__media">
+                <img src="assets/preview/preview-06.jpg" alt="Web app interface preview" class="preview-card__image" loading="lazy" draggable="false">
+              </div>
+              <span class="preview-card__label">Web App</span>
+            </li>
+            <li class="preview-card">
+              <div class="preview-card__media">
+                <img src="assets/preview/preview-07.jpg" alt="Mobile app flow detail" class="preview-card__image" loading="lazy" draggable="false">
+              </div>
+              <span class="preview-card__label">Mobile App</span>
+            </li>
+            <li class="preview-card">
+              <div class="preview-card__media">
+                <img src="assets/preview/preview-08.jpg" alt="Component library detail" class="preview-card__image" loading="lazy" draggable="false">
+              </div>
+              <span class="preview-card__label">UI Detail</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+      -->
+
+      <!-- ============================
+           Projects
+           ============================ -->
+      <section class="section-projects" id="projects">
+        <h2 class="section-projects__heading reveal">Project</h2>
+
+        <div class="project-filters reveal" data-project-filters role="tablist" aria-label="프로젝트 필터"></div>
+
+        <div class="project-grid">
+          <div class="project-grid__col">
+            <a href="project-arden.html" class="project-card reveal">
+              <div class="project-card__media">
+                <img src="images/arden-cover.png"
+                     alt="Arden 프로젝트 미리보기"
+                     class="project-card__image"
+                     loading="lazy">
+              </div>
+              <div class="project-card__body">
+                <h3 class="heading-h5 project-card__title">Arden</h3>
+                <p class="project-card__description">
+                  가구 브랜드 Arden의 브랜딩, 웹 디자인 프로젝트
+                </p>
+                <div class="project-card__footer">
+                  <div class="project-card__tags project-tags">
+                    <span class="project-tag">Web Design</span>
+                    <span class="project-tag">Branding</span>
+                    <span class="project-tag">UX/UI</span>
+                  </div>
+                  <div class="project-card__cta button-link">
+                    View project
+                    <span class="button-link__arrow" aria-hidden="true">
+                      <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="currentColor" d="M128 26a102 102 0 1 0 102 102A102.2 102.2 0 0 0 128 26Zm0 192a90 90 0 1 1 90-90a90.1 90.1 0 0 1-90 90Zm34-118v48a6 6 0 0 1-12 0v-33.5l-45.8 45.7a5.9 5.9 0 0 1-8.4-8.4l45.7-45.8H108a6 6 0 0 1 0-12h48a6 6 0 0 1 6 6Z"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="project-book-planet.html" class="project-card reveal">
+              <div class="project-card__media">
+                <img src="images/book-planet-cover.png"
+                     alt="Book Planet - UX/UI 프로젝트 메인 화면"
+                     class="project-card__image"
+                     loading="lazy">
+              </div>
+              <div class="project-card__body">
+                <h3 class="heading-h5 project-card__title">Book Planet</h3>
+                <p class="project-card__description">
+                  지역 기반 탐색과 거래 설계로 중고 도서 거래의 사용성을 개선하는 UX/UI 프로젝트.
+                </p>
+                <div class="project-card__footer">
+                  <div class="project-card__tags project-tags">
+                    <span class="project-tag">Mobile App</span>
+                    <span class="project-tag">UX/UI</span>
+                  </div>
+                  <div class="project-card__cta button-link">
+                    View project
+                    <span class="button-link__arrow" aria-hidden="true">
+                      <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="currentColor" d="M128 26a102 102 0 1 0 102 102A102.2 102.2 0 0 0 128 26Zm0 192a90 90 0 1 1 90-90a90.1 90.1 0 0 1-90 90Zm34-118v48a6 6 0 0 1-12 0v-33.5l-45.8 45.7a5.9 5.9 0 0 1-8.4-8.4l45.7-45.8H108a6 6 0 0 1 0-12h48a6 6 0 0 1 6 6Z"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="project-sweethome.html" class="project-card reveal" style="--reveal-delay: 0.1s">
+              <div class="project-card__media">
+                <img src="images/sweethome-cover.png"
+                     alt="스윗홈 프로젝트 미리보기"
+                     class="project-card__image"
+                     loading="lazy">
+              </div>
+              <div class="project-card__body">
+                <h3 class="heading-h5 project-card__title">스윗홈</h3>
+                <p class="project-card__description">
+                  말기 환자가 통증과 진통제 복용 이력을 체계적으로 기록하고 관리할 수 있도록 설계한 헬스케어 모바일 앱 프로젝트.
+                </p>
+                <div class="project-card__footer">
+                  <div class="project-card__tags project-tags">
+                    <span class="project-tag">Mobile App</span>
+                    <span class="project-tag">Healthcare</span>
+                    <span class="project-tag">UX/UI</span>
+                  </div>
+                  <div class="project-card__cta button-link">
+                    View project
+                    <span class="button-link__arrow" aria-hidden="true">
+                      <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="currentColor" d="M128 26a102 102 0 1 0 102 102A102.2 102.2 0 0 0 128 26Zm0 192a90 90 0 1 1 90-90a90.1 90.1 0 0 1-90 90Zm34-118v48a6 6 0 0 1-12 0v-33.5l-45.8 45.7a5.9 5.9 0 0 1-8.4-8.4l45.7-45.8H108a6 6 0 0 1 0-12h48a6 6 0 0 1 6 6Z"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="project-grid__col">
+            <a href="project-clarix.html" class="project-card reveal">
+              <div class="project-card__media">
+                <img src="images/clarix-cover.png"
+                     alt="Clarix 프로젝트 미리보기"
+                     class="project-card__image"
+                     loading="lazy">
+              </div>
+              <div class="project-card__body">
+                <h3 class="heading-h5 project-card__title">Clarix</h3>
+                <p class="project-card__description">
+                  사용자 행동 데이터를 한 곳에서 분석하는 B2B SaaS 분석 플랫폼 랜딩 페이지 설계와 UXUI 디자인
+                </p>
+                <div class="project-card__footer">
+                  <div class="project-card__tags project-tags">
+                    <span class="project-tag">Web Design</span>
+                    <span class="project-tag">B2B SaaS</span>
+                    <span class="project-tag">UX/UI</span>
+                  </div>
+                  <div class="project-card__cta button-link">
+                    View project
+                    <span class="button-link__arrow" aria-hidden="true">
+                      <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="currentColor" d="M128 26a102 102 0 1 0 102 102A102.2 102.2 0 0 0 128 26Zm0 192a90 90 0 1 1 90-90a90.1 90.1 0 0 1-90 90Zm34-118v48a6 6 0 0 1-12 0v-33.5l-45.8 45.7a5.9 5.9 0 0 1-8.4-8.4l45.7-45.8H108a6 6 0 0 1 0-12h48a6 6 0 0 1 6 6Z"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="project-balancer.html" class="project-card reveal" style="--reveal-delay: 0.05s">
+              <div class="project-card__media">
+                <img src="images/balancer-cover.png"
+                     alt="Balancer 프로젝트 미리보기"
+                     class="project-card__image"
+                     loading="lazy">
+              </div>
+              <div class="project-card__body">
+                <h3 class="heading-h5 project-card__title">Balancer</h3>
+                <p class="project-card__description">
+                  식단 기록을 바탕으로 영양 밸런스를 분석하고, 필요한 식품과 맞춤 영양 음료를 제안하는 앱·제품 디자인 프로젝트.
+                </p>
+                <div class="project-card__footer">
+                  <div class="project-card__tags project-tags">
+                    <span class="project-tag">Mobile App</span>
+                    <span class="project-tag">Product Design</span>
+                    <span class="project-tag">UX/UI</span>
+                  </div>
+                  <div class="project-card__cta button-link">
+                    View project
+                    <span class="button-link__arrow" aria-hidden="true">
+                      <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="currentColor" d="M128 26a102 102 0 1 0 102 102A102.2 102.2 0 0 0 128 26Zm0 192a90 90 0 1 1 90-90a90.1 90.1 0 0 1-90 90Zm34-118v48a6 6 0 0 1-12 0v-33.5l-45.8 45.7a5.9 5.9 0 0 1-8.4-8.4l45.7-45.8H108a6 6 0 0 1 0-12h48a6 6 0 0 1 6 6Z"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="project-story-of-travel.html" class="project-card reveal" style="--reveal-delay: 0.15s">
+              <div class="project-card__media">
+                <img src="images/story-of-travel-cover.png"
+                     alt="Story of Travel 프로젝트 미리보기"
+                     class="project-card__image"
+                     loading="lazy">
+              </div>
+              <div class="project-card__body">
+                <h3 class="heading-h5 project-card__title">Story of Travel</h3>
+                <p class="project-card__description">
+                  테마·계절·지역·인기 순위 기반으로 국내 여행지 사진을 탐색하고 업로드할 수 있도록 설계한 여행 웹서비스 프로젝트.
+                </p>
+                <div class="project-card__footer">
+                  <div class="project-card__tags project-tags">
+                    <span class="project-tag">Web Design</span>
+                    <span class="project-tag">Travel</span>
+                    <span class="project-tag">UX/UI</span>
+                  </div>
+                  <div class="project-card__cta button-link">
+                    View project
+                    <span class="button-link__arrow" aria-hidden="true">
+                      <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="currentColor" d="M128 26a102 102 0 1 0 102 102A102.2 102.2 0 0 0 128 26Zm0 192a90 90 0 1 1 90-90a90.1 90.1 0 0 1-90 90Zm34-118v48a6 6 0 0 1-12 0v-33.5l-45.8 45.7a5.9 5.9 0 0 1-8.4-8.4l45.7-45.8H108a6 6 0 0 1 0-12h48a6 6 0 0 1 6 6Z"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================
+           About
+           ============================ -->
+      <section class="section-about" id="about">
+        <div class="section-about__inner">
+          <h2 class="section-about__title reveal">About Me</h2>
+          <ul class="about-list" id="experience">
+            <li class="about-list__item reveal">
+              <span class="about-list__title">상명대학교 산업디자인학과</span>
+              <span class="about-list__date">2018.03 - 2025.02</span>
+            </li>
+            <li class="about-list__item reveal" style="--reveal-delay: 0.05s">
+              <span class="about-list__title">B2B SaaS UI Designer</span>
+              <span class="about-list__date">2025.07 -</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================
+         Footer
+         ============================ -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <a href="index.html" class="footer__logo-link" aria-label="홈">
+              <span class="brand brand--lg">
+                <span class="brand__name">Hankyeol Kim</span>
+                <span class="brand__role">Product Designer</span>
+              </span>
+            </a>
+          </div>
+
+          <div class="footer__columns">
+            <div class="footer__column">
+              <h3 class="footer__column-title">Quick Links</h3>
+              <a href="#projects"  class="footer__link">Project</a>
+              <a href="#about"     class="footer__link">About</a>
+              <a href="#experience" class="footer__link">Experience</a>
+            </div>
+            <div class="footer__column">
+              <h3 class="footer__column-title">Contact</h3>
+              <a href="tel:+821041495133"        class="footer__link">+82 10 4149 5133</a>
+              <a href="mailto:sk41495133@gmail.com" class="footer__link">sk41495133@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__divider"></div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

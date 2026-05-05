@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>스윗홈 - Hankyeol Kim Portfolio</title>
+  <meta name="description" content="말기 환자가 통증과 진통제 복용 이력을 체계적으로 기록하고 관리할 수 있도록 설계한 헬스케어 모바일 앱 프로젝트.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/webclip.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/project-detail.css">
+</head>
+<body>
+  <!--
+    TODO: 콘텐츠 작성 후 project-book-planet.html 의 섹션 구조
+    (overview / background / insight-solution / principles / user-flow / design-system / ui-design)
+    를 참고해 본문을 채우세요.
+  -->
+  <div class="page">
+    <header class="navbar" data-navbar>
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__logo-link" aria-label="홈">
+          <span class="brand">
+            <span class="brand__name">Hankyeol Kim</span>
+            <span class="brand__role">Product Designer</span>
+          </span>
+        </a>
+        <nav class="navbar__menu" data-navbar-menu aria-label="주요 메뉴">
+          <a href="index.html#projects"   class="navbar__link">Project</a>
+          <a href="index.html#about"      class="navbar__link">About</a>
+          <!-- <a href="index.html#experience" class="navbar__link">Experience</a> -->
+        </nav>
+        <button type="button" class="button button--navbar navbar__cta" data-contact-trigger>Contact</button>
+        <button type="button" class="navbar__toggle" data-navbar-toggle aria-label="메뉴 열기">
+          <span class="navbar__toggle-icon"><span></span></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="main project-detail" style="--project-primary: #1F5BFF;">
+      <section class="project-header">
+        <div class="project-header__top">
+          <div class="project-header__intro">
+            <div class="project-header__tags project-tags reveal">
+              <span class="project-tag">Mobile App</span>
+              <span class="project-tag">Healthcare</span>
+              <span class="project-tag">UX/UI</span>
+            </div>
+            <h1 class="project-header__title reveal" style="--reveal-delay: 0.05s">스윗홈</h1>
+            <p class="project-header__description reveal" style="--reveal-delay: 0.1s">
+              말기 환자가 통증과 진통제 복용 이력을 체계적으로 기록하고, 보호자와 의료진이 환자 상태를 더 쉽게 파악할 수 있도록 설계한 통증 관리 앱 프로젝트.
+            </p>
+          </div>
+
+          <div class="project-header__meta reveal" style="--reveal-delay: 0.15s">
+            <div class="project-meta__item">
+              <h6 class="project-meta__label">프로젝트 구분</h6>
+              <p class="project-meta__value">팀 프로젝트</p>
+            </div>
+            <div class="project-meta__item">
+              <h6 class="project-meta__label">팀 구성</h6>
+              <p class="project-meta__value">기획 2 · 디자인 1 · 개발 1</p>
+            </div>
+            <div class="project-meta__item">
+              <h6 class="project-meta__label">담당 역할</h6>
+              <p class="project-meta__value">UX/UI 디자인 담당</p>
+            </div>
+            <div class="project-meta__item">
+              <h6 class="project-meta__label">작업 기간</h6>
+              <p class="project-meta__value">2024.12 - 2025.02</p>
+            </div>
+            <div class="project-meta__item">
+              <h6 class="project-meta__label">사용 툴</h6>
+              <p class="project-meta__value">Figma · Photoshop</p>
+            </div>
+          </div>
+        </div>
+
+        <figure class="project-header__media reveal" style="--reveal-delay: 0.2s">
+          <img src="images/sweethome-cover.png"
+               alt="스윗홈 프로젝트 메인 비주얼"
+               class="project-header__image">
+        </figure>
+      </section>
+
+      <div class="project-content">
+        <!-- Overview -->
+        <section class="work-section reveal">
+          <header class="section-title">
+            <h2 class="section-title__en">Overview</h2>
+            <p class="section-title__ko">프로젝트 개요</p>
+          </header>
+          <p class="work-section__lede">
+            스윗홈은 말기 환자들이 자신의 통증 상태와 진통제 복용 이력을 체계적으로 기록할 수 있도록 돕는 모바일 앱입니다.
+            사용자는 통증 강도, 위치, 지속 시간, 악화 요인, 진통제 복용 여부를 기록할 수 있으며, 누적된 기록은 리포트 형태로 정리되어 환자와 보호자, 의료진이 통증 흐름을 쉽게 확인할 수 있도록 설계했습니다.
+          </p>
+        </section>
+
+        <!-- Core Features -->
+        <section class="work-section reveal">
+          <header class="section-title">
+            <h2 class="section-title__en">Core Features</h2>
+            <p class="section-title__ko">핵심 기능</p>
+          </header>
+          <p class="work-section__lede">
+            복잡한 의료 정보를 단순한 입력 흐름으로 정리하고, 통증 기록부터 복약 관리, 리포트 확인까지 이어지는 사용 흐름을 설계했습니다.
+          </p>
+          <div class="brief-grid brief-grid--4">
+            <article class="brief-card">
+              <h3 class="brief-card__title">통증 기록</h3>
+              <p class="brief-card__body">통증 강도, 위치, 원인, 지속 시간 등을 간단히 입력하고 기록할 수 있도록 설계했습니다.</p>
+            </article>
+            <article class="brief-card">
+              <h3 class="brief-card__title">진통제 관리</h3>
+              <p class="brief-card__body">정기 복용 진통제와 속효성 진통제를 구분해 복용 이력을 관리할 수 있도록 구성했습니다.</p>
+            </article>
+            <article class="brief-card">
+              <h3 class="brief-card__title">통증 리포트</h3>
+              <p class="brief-card__body">날짜별 통증 기록과 진통제 복용 이력을 캘린더와 목록 형태로 확인할 수 있도록 설계했습니다.</p>
+            </article>
+            <article class="brief-card">
+              <h3 class="brief-card__title">통증 가이드</h3>
+              <p class="brief-card__body">통증 관리와 진통제 복용에 필요한 정보를 사용자가 쉽게 찾아볼 수 있도록 정리했습니다.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- UI Design (groups Pain Recording, Medication, Report & Community as subsections) -->
+        <section class="work-section reveal">
+          <header class="section-title">
+            <h2 class="section-title__en">UI Design</h2>
+          </header>
+
+          <div class="subsection-stack">
+            <!-- Main Page -->
+            <section class="work-section">
+              <header class="section-title section-title--sub">
+                <h3 class="section-title__en">Main Page</h3>
+              </header>
+              <img src="images/sweethome-main.png" alt="메인 화면" class="section-image" loading="lazy">
+            </section>
+
+            <!-- 통증 기록하기 -->
+            <section class="work-section">
+              <header class="section-title section-title--sub">
+                <h3 class="section-title__en">통증 기록하기</h3>
+              </header>
+              <img src="images/sweethome-pain-record.png" alt="통증 기록 화면" class="section-image" loading="lazy">
+            </section>
+
+            <!-- 통증 가이드 -->
+            <section class="work-section">
+              <header class="section-title section-title--sub">
+                <h3 class="section-title__en">통증 가이드</h3>
+              </header>
+              <img src="images/sweethome-pain-guide.png" alt="통증 가이드 화면" class="section-image" loading="lazy">
+            </section>
+
+            <!-- 커뮤니티 -->
+            <section class="work-section">
+              <header class="section-title section-title--sub">
+                <h3 class="section-title__en">커뮤니티</h3>
+              </header>
+              <img src="images/sweethome-community.png" alt="커뮤니티 화면" class="section-image" loading="lazy">
+            </section>
+
+            <!-- 통증 리포트 -->
+            <section class="work-section">
+              <header class="section-title section-title--sub">
+                <h3 class="section-title__en">통증 리포트</h3>
+              </header>
+              <img src="images/sweethome-report.png" alt="통증 리포트 화면" class="section-image" loading="lazy">
+            </section>
+
+            <!-- 진통제 관리 -->
+            <section class="work-section">
+              <header class="section-title section-title--sub">
+                <h3 class="section-title__en">진통제 관리</h3>
+              </header>
+              <img src="images/sweethome-medication.png" alt="진통제 관리 화면" class="section-image" loading="lazy">
+            </section>
+
+            <!-- 마이페이지 -->
+            <section class="work-section">
+              <header class="section-title section-title--sub">
+                <h3 class="section-title__en">마이페이지</h3>
+              </header>
+              <img src="images/sweethome-mypage.png" alt="마이페이지 화면" class="section-image" loading="lazy">
+            </section>
+          </div>
+        </section>
+
+        <!-- Design System -->
+        <section class="work-section reveal">
+          <header class="section-title">
+            <h2 class="section-title__en">Design System</h2>
+            <p class="section-title__ko">디자인 시스템</p>
+          </header>
+          <ul class="spec-list">
+            <li class="spec-list__row">
+              <span class="spec-list__label">Main Color</span>
+              <span class="spec-list__value">
+                <span class="spec-color-chip" style="--swatch: #1F5BFF;"></span>
+                #1F5BFF
+              </span>
+            </li>
+            <li class="spec-list__row">
+              <span class="spec-list__label">Sub Color</span>
+              <span class="spec-list__value">
+                <span class="spec-color-chip" style="--swatch: #5986FF;"></span>
+                #5986FF
+                <span class="spec-color-chip" style="--swatch: #EAEFFF; margin-left: 16px;"></span>
+                #EAEFFF
+              </span>
+            </li>
+            <li class="spec-list__row">
+              <span class="spec-list__label">Medication Color</span>
+              <span class="spec-list__value">
+                <span class="spec-color-chip" style="--swatch: #FF5454;"></span>
+                #FF5454
+                <span class="spec-color-chip" style="--swatch: #70D886; margin-left: 16px;"></span>
+                #70D886
+              </span>
+            </li>
+            <li class="spec-list__row">
+              <span class="spec-list__label">Typeface</span>
+              <span class="spec-list__value">Pretendard</span>
+            </li>
+            <li class="spec-list__row">
+              <span class="spec-list__label">Pain Scale</span>
+              <span class="spec-list__value">0-10 단계별 컬러 스케일</span>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="other-projects" data-carousel>
+        <div class="other-projects__container">
+          <header class="other-projects__header reveal">
+            <div class="other-projects__intro">
+              <h2 class="other-projects__title">Other Projects</h2>
+              <p class="other-projects__description">다른 프로젝트도 함께 살펴보세요.</p>
+            </div>
+            <div class="other-projects__nav" aria-label="Other projects controls">
+              <button type="button" class="other-projects__btn" data-carousel-prev aria-label="이전">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button type="button" class="other-projects__btn" data-carousel-next aria-label="다음">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </header>
+        </div>
+
+        <div class="other-projects__viewport">
+          <div class="other-projects__track" data-carousel-track>
+            <a href="project-clarix.html" class="other-project reveal">
+              <div class="other-project__media">
+                <img src="images/clarix-cover.png" alt="Clarix 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">Clarix</h3>
+              <p class="other-project__meta">Web Design · B2B SaaS · UX/UI</p>
+            </a>
+
+            <a href="project-arden.html" class="other-project reveal">
+              <div class="other-project__media">
+                <img src="images/arden-cover.png" alt="Arden 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">Arden</h3>
+              <p class="other-project__meta">Web Design · Branding · UI/UX</p>
+            </a>
+
+            <a href="project-book-planet.html" class="other-project reveal">
+              <div class="other-project__media">
+                <img src="images/book-planet-cover.png" alt="Book Planet 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">Book Planet</h3>
+              <p class="other-project__meta">Mobile App · UX/UI</p>
+            </a>
+
+            <a href="project-balancer.html" class="other-project reveal" style="--reveal-delay: 0.05s">
+              <div class="other-project__media">
+                <img src="images/balancer-cover.png" alt="Balancer 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">Balancer</h3>
+              <p class="other-project__meta">Mobile App · Product Design · UX/UI</p>
+            </a>
+
+            <a href="project-story-of-travel.html" class="other-project reveal" style="--reveal-delay: 0.1s">
+              <div class="other-project__media">
+                <img src="images/story-of-travel-cover.png" alt="Story of Travel 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">Story of Travel</h3>
+              <p class="other-project__meta">Web Design · Travel · UX/UI</p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <a href="index.html" class="footer__logo-link" aria-label="홈">
+              <span class="brand brand--lg">
+                <span class="brand__name">Hankyeol Kim</span>
+                <span class="brand__role">Product Designer</span>
+              </span>
+            </a>
+          </div>
+          <div class="footer__columns">
+            <div class="footer__column">
+              <h3 class="footer__column-title">Quick Links</h3>
+              <a href="index.html#projects"   class="footer__link">Project</a>
+              <a href="index.html#about"      class="footer__link">About</a>
+              <a href="index.html#experience" class="footer__link">Experience</a>
+            </div>
+            <div class="footer__column">
+              <h3 class="footer__column-title">Contact</h3>
+              <a href="tel:+821041495133"           class="footer__link">+82 10 4149 5133</a>
+              <a href="mailto:sk41495133@gmail.com" class="footer__link">sk41495133@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__divider"></div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

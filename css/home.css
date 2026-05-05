@@ -1,0 +1,355 @@
+/* ==========================================================================
+   Home - Hero
+   ========================================================================== */
+
+.hero {
+  padding-block: 8rem 5rem;
+  padding-inline: var(--container-padding-x);
+}
+
+.hero__inner {
+  max-width: var(--max-width-content);
+  margin-inline: auto;
+  text-align: center;
+}
+
+.hero__title {
+  margin-bottom: 1.25rem;
+}
+
+.hero__description {
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: var(--fs-medium);
+  color: var(--color-text);
+  line-height: var(--lh-loose);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.hero__meta {
+  margin-top: 2rem;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  color: var(--color-gray-400);
+}
+
+.hero__meta-disciplines {
+  font-weight: var(--fw-medium);
+  color: var(--color-gray-600);
+}
+
+@media (max-width: 991px) {
+  .hero { padding-block: 5rem 3rem; }
+  .hero__meta { font-size: 0.8125rem; }
+}
+
+/* ==========================================================================
+   Home - Design Preview (horizontal scroll showcase)
+   ========================================================================== */
+
+.design-preview {
+  padding-block: 4rem 5rem;
+}
+
+.design-preview__container {
+  width: 100%;
+  max-width: var(--max-width-page);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+.design-preview__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.design-preview__intro {
+  max-width: 36rem;
+}
+
+.design-preview__title {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-tight);
+}
+
+.design-preview__sub {
+  font-size: var(--fs-medium);
+  color: var(--color-text);
+  line-height: var(--lh-loose);
+}
+
+.design-preview__nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.design-preview__btn {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--color-gray-200);
+  background-color: var(--color-white);
+  color: var(--color-black);
+  transition: background-color var(--duration-base) var(--ease),
+              border-color var(--duration-base) var(--ease),
+              opacity var(--duration-base) var(--ease);
+}
+
+.design-preview__btn:hover { background-color: var(--color-gray-100); }
+.design-preview__btn:active { background-color: var(--color-gray-softer); }
+.design-preview__btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.design-preview__btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Viewport: wraps the track and provides edge fade gradients */
+.design-preview__viewport {
+  position: relative;
+  width: 100%;
+  max-width: var(--max-width-page);
+  margin-inline: auto;
+}
+
+.design-preview__viewport::before,
+.design-preview__viewport::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: var(--container-padding-x);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.design-preview__viewport::before {
+  left: 0;
+  background: linear-gradient(to right,
+    var(--color-white) 30%,
+    rgba(255, 255, 255, 0));
+}
+
+.design-preview__viewport::after {
+  right: 0;
+  background: linear-gradient(to left,
+    var(--color-white) 30%,
+    rgba(255, 255, 255, 0));
+}
+
+/* The horizontal scroll track */
+.design-preview__track {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 4px var(--container-padding-x);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--container-padding-x);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: grab;
+  list-style: none;
+}
+
+.design-preview__track::-webkit-scrollbar { display: none; }
+
+.design-preview__track.is-dragging {
+  cursor: grabbing;
+  scroll-behavior: auto;
+  user-select: none;
+}
+
+/* Cards */
+.preview-card {
+  flex: 0 0 25%; /* 30% smaller than the previous 36% */
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.preview-card__media {
+  aspect-ratio: 4 / 3;
+  border-radius: 18px;
+  border: 1px solid var(--color-gray-200);
+  background-color: var(--color-gray-soft);
+  background-image: linear-gradient(135deg,
+    var(--color-gray-100) 0%,
+    var(--color-gray-200) 100%);
+  overflow: hidden;
+}
+
+.preview-card__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* fill the 4:3 frame, crop overflow */
+  object-position: center; /* keep the centered region visible */
+  transition: transform 0.5s var(--ease);
+  pointer-events: none;    /* prevent native image drag from blocking the track drag */
+}
+
+.preview-card:hover .preview-card__image {
+  transform: scale(1.04);
+}
+
+.preview-card__label {
+  padding-inline: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: var(--fw-medium);
+  color: var(--color-gray-600);
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 991px) {
+  .design-preview { padding-block: 3rem 4rem; }
+  .design-preview__header { margin-bottom: 1.75rem; }
+  .design-preview__title { font-size: 1.75rem; }
+  .design-preview__nav { display: none; } /* native touch scroll on mobile */
+
+  .preview-card { flex: 0 0 55%; } /* 30% smaller than 78% */
+}
+
+@media (max-width: 479px) {
+  .preview-card { flex: 0 0 59%; } /* 30% smaller than 84% */
+  .preview-card__media { border-radius: 14px; }
+}
+
+/* ==========================================================================
+   Home - Projects section
+   ========================================================================== */
+
+.section-projects {
+  padding-block: 4rem 6rem;
+  padding-inline: var(--container-padding-x);
+}
+
+.section-projects__heading {
+  margin: 0 auto 3rem;
+  max-width: var(--max-width-page);
+  font-size: 2rem;
+  font-weight: var(--fw-medium);
+}
+
+.project-grid {
+  display: flex;
+  gap: 3rem;
+  max-width: var(--max-width-page);
+  margin-inline: auto;
+}
+
+.project-grid__col {
+  flex: 1 1 0;
+  min-width: 0; /* allow flex children to shrink below their content size */
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.project-grid__col > .project-card {
+  height: auto; /* natural height based on image aspect ratio */
+}
+
+/* When the filter empties a column, hide it and keep the remaining column at
+   half width so its cards naturally shift to the left edge of the grid. */
+.project-grid__col.is-empty {
+  display: none;
+}
+
+.project-grid:has(.project-grid__col.is-empty) .project-grid__col {
+  flex: 0 0 calc((100% - 3rem) / 2);
+}
+
+@media (max-width: 991px) {
+  .project-grid {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .project-grid__col {
+    gap: 2rem;
+  }
+}
+
+/* ==========================================================================
+   Home - About me
+   ========================================================================== */
+
+.section-about {
+  padding-block: 5rem;
+  padding-inline: var(--container-padding-x);
+}
+
+.section-about__inner {
+  max-width: 105rem;
+  margin-inline: auto;
+  padding: 3rem;
+  background-color: var(--color-gray-soft);
+  border-radius: var(--radius-lg);
+}
+
+.section-about__title {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: var(--fw-medium);
+}
+
+.about-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+.about-list__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.75rem 1.25rem;
+  padding-block: 1rem;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.about-list__item:last-child {
+  border-bottom: 0;
+}
+
+.about-list__title {
+  flex: 1 1 auto;
+  font-size: 1.125rem;
+  font-weight: var(--fw-semibold);
+  font-family: var(--font-kr);
+  color: var(--color-text-strong);
+}
+
+.about-list__date {
+  font-size: var(--fs-medium);
+  color: var(--color-text);
+}
+
+@media (max-width: 991px) {
+  .section-about__inner {
+    padding: 3rem 2rem;
+  }
+}

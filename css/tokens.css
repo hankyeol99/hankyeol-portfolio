@@ -1,0 +1,126 @@
+/* ==========================================================================
+   Design Tokens
+   ========================================================================== */
+
+:root {
+  /* Color - neutrals */
+  --color-black: #171717;
+  --color-white: #ffffff;
+  --color-text: #535353;
+  --color-text-muted: #767676;
+  --color-text-strong: #0b0b0c;
+  --color-border: #c5c5c5;
+
+  /* Color - gray scale */
+  --color-gray-50:  #fcfcfd;
+  --color-gray-100: #f7f7fa;
+  --color-gray-200: #e4e4ea;
+  --color-gray-300: #c6c6ce;
+  --color-gray-400: #9a9aa3;
+  --color-gray-600: #5a5a63;
+  --color-gray-700: #44444a;
+  --color-gray-900: #0b0b0c;
+
+  --color-gray-hover:   #e7e7e7;
+  --color-gray-pressed: #d6d6d6;
+  --color-gray-soft:    #f8f8f8; /* light-grey */
+  --color-gray-softer:  #f2f2f2; /* grey */
+
+  /* Color - accents */
+  --color-bookplanet-1:  #5a57ff;
+  --color-bookplanet-2:  #3b38d8;
+  --color-error:         #e23939;
+
+  /* Spacing scale */
+  --space-tiny:     0.25rem;  /* 4  */
+  --space-xxsmall:  0.5rem;   /* 8  */
+  --space-xsmall:   1rem;     /* 16 */
+  --space-small:    1.5rem;   /* 24 */
+  --space-medium:   2rem;     /* 32 */
+  --space-large:    3rem;     /* 48 */
+  --space-xlarge:   4rem;     /* 64 */
+  --space-xxlarge:  5rem;     /* 80 */
+  --space-huge:     6rem;     /* 96 */
+
+  /* Layout */
+  --max-width-page:    1440px;
+  --max-width-content: 50rem;     /* 800 */
+  --max-width-medium:  53rem;     /* 848 */
+  --max-width-small:   30rem;     /* 480 */
+  --container-padding-x: 64px;
+
+  /* Typography - families */
+  --font-sans: "Inter", "Pretendard", "Noto Sans KR", system-ui, -apple-system,
+               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-kr:   "Pretendard", "Noto Sans KR", "Inter", system-ui, sans-serif;
+
+  /* Typography - sizes (rem-based) */
+  --fs-h1: 4rem;       /* 64 */
+  --fs-h2: 3rem;       /* 48 */
+  --fs-h3: 2.5rem;     /* 40 */
+  --fs-h4: 2rem;       /* 32 */
+  --fs-h5: 1.6rem;     /* 25.6 */
+  --fs-h6: 1.25rem;    /* 20 */
+  --fs-body:    1rem;       /* 16 */
+  --fs-medium:  1rem;       /* 16 */
+  --fs-regular: 0.9375rem;  /* 15 */
+  --fs-small:   0.875rem;   /* 14 */
+  --fs-tiny:    0.75rem;    /* 12 */
+
+  /* Typography - weights */
+  --fw-light:    300;
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+  --fw-xbold:    800;
+
+  /* Typography - line heights */
+  --lh-tight:   1.2;
+  --lh-snug:    1.3;
+  --lh-default: 1.4;
+  --lh-relaxed: 1.5;
+  --lh-loose:   1.6;
+
+  /* Radius */
+  --radius-pill:  100rem;
+  --radius-xl:    3rem;       /* 48 - large containers */
+  --radius-lg:    30px;       /* services-component-wrapper */
+  --radius-md:    20px;       /* cards */
+  --radius-sm:    16px;       /* card images */
+  --radius-xs:    12px;       /* small elements */
+  --radius-input: 10px;
+
+  /* Elevation */
+  --shadow-card:    0 1px 6px rgba(0, 0, 0, 0.12);
+  --shadow-button:  0 0 5px rgba(0, 0, 0, 0.2);
+
+  /* Motion */
+  --ease:       ease;
+  --duration-fast:   0.2s;
+  --duration-base:   0.3s;
+  --duration-slow:   0.4s;
+
+  /* Header height (for fixed-nav offset) */
+  --navbar-height: 80px;
+}
+
+@media (max-width: 991px) {
+  :root {
+    --container-padding-x: 32px;
+    --fs-h1: 3rem;
+    --fs-h2: 2.5rem;
+    --fs-h3: 2rem;
+    --fs-h4: 1.75rem;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --container-padding-x: 20px;
+    --fs-h1: 2.25rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1.75rem;
+    --fs-h4: 1.5rem;
+  }
+}

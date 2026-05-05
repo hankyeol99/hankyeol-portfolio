@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Clarix - Hankyeol Kim Portfolio</title>
+  <meta name="description" content="퍼널·리텐션·세그먼트부터 AI 인사이트까지, 사용자 행동 데이터를 한 곳에서 분석하는 B2B SaaS 플랫폼의 랜딩 페이지와 UI 디자인 프로젝트.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/webclip.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/project-detail.css">
+</head>
+<body>
+  <div class="page">
+    <header class="navbar" data-navbar>
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__logo-link" aria-label="홈">
+          <span class="brand">
+            <span class="brand__name">Hankyeol Kim</span>
+            <span class="brand__role">Product Designer</span>
+          </span>
+        </a>
+        <nav class="navbar__menu" data-navbar-menu aria-label="주요 메뉴">
+          <a href="index.html#projects"   class="navbar__link">Project</a>
+          <a href="index.html#about"      class="navbar__link">About</a>
+          <!-- <a href="index.html#experience" class="navbar__link">Experience</a> -->
+        </nav>
+        <button type="button" class="button button--navbar navbar__cta" data-contact-trigger>Contact</button>
+        <button type="button" class="navbar__toggle" data-navbar-toggle aria-label="메뉴 열기">
+          <span class="navbar__toggle-icon"><span></span></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="main project-detail" style="--project-primary: #4633F0;">
+      <section class="project-header">
+        <div class="project-header__top">
+          <div class="project-header__intro">
+            <div class="project-header__tags project-tags reveal">
+              <span class="project-tag">Web Design</span>
+              <span class="project-tag">B2B SaaS</span>
+              <span class="project-tag">UX/UI</span>
+            </div>
+            <h1 class="project-header__title reveal" style="--reveal-delay: 0.05s">Clarix</h1>
+            <p class="project-header__description reveal" style="--reveal-delay: 0.1s">
+              사용자 행동 데이터를 한 곳에서 분석하는 B2B SaaS 분석 플랫폼 랜딩 페이지 설계와 UXUI 디자인
+            </p>
+            <p class="project-header__cta reveal" style="--reveal-delay: 0.15s">
+              <a href="https://clarix-pa.netlify.app/" class="button" target="_blank" rel="noopener noreferrer">웹사이트 바로 가기 →</a>
+            </p>
+          </div>
+
+          <div class="project-header__meta reveal" style="--reveal-delay: 0.2s">
+            <div class="project-meta__item">
+              <h6 class="project-meta__label">프로젝트 구분</h6>
+              <p class="project-meta__value">개인 프로젝트</p>
+            </div>
+            <div class="project-meta__item">
+              <h6 class="project-meta__label">작업 기간</h6>
+              <p class="project-meta__value">2026.03</p>
+            </div>
+            <div class="project-meta__item">
+              <h6 class="project-meta__label">사용 툴</h6>
+              <p class="project-meta__value">Figma · Webflow · Claude Code · Stitch AI</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="project-content">
+        <img src="images/clarix-website.png" alt="Clarix 랜딩 페이지" class="section-image" loading="lazy" style="border-radius: 0;">
+
+        <!-- Design System -->
+        <section class="work-section reveal">
+          <header class="section-title">
+            <h2 class="section-title__en">Design System</h2>
+            <p class="section-title__ko">디자인 시스템</p>
+          </header>
+
+          <ul class="spec-list">
+            <li class="spec-list__row">
+              <span class="spec-list__label">Brand</span>
+              <span class="spec-list__value">
+                <span class="spec-color-chip" style="--swatch: #4633F0;"></span>
+                #4633F0
+              </span>
+            </li>
+            <li class="spec-list__row">
+              <span class="spec-list__label">Ink</span>
+              <span class="spec-list__value">
+                <span class="spec-color-chip" style="--swatch: #051B31;"></span>
+                <span class="spec-color-chip" style="--swatch: #252525;"></span>
+                <span class="spec-color-chip" style="--swatch: #5A606A;"></span>
+                <span style="margin-left: 8px;">Hero Ink · Strong · Body</span>
+              </span>
+            </li>
+            <li class="spec-list__row">
+              <span class="spec-list__label">Surface</span>
+              <span class="spec-list__value">
+                <span class="spec-color-chip" style="--swatch: #FFFFFF;"></span>
+                <span class="spec-color-chip" style="--swatch: #F7F8FA;"></span>
+                <span class="spec-color-chip" style="--swatch: #E4E4EA;"></span>
+                <span style="margin-left: 8px;">Card · App BG · Border</span>
+              </span>
+            </li>
+            <li class="spec-list__row">
+              <span class="spec-list__label">Typeface</span>
+              <span class="spec-list__value">Pretendard · Inter Tight</span>
+            </li>
+            <li class="spec-list__row">
+              <span class="spec-list__label">Radius</span>
+              <span class="spec-list__value">7 · 12 · 16px (sm / md / lg)</span>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="other-projects" data-carousel>
+        <div class="other-projects__container">
+          <header class="other-projects__header reveal">
+            <div class="other-projects__intro">
+              <h2 class="other-projects__title">Other Projects</h2>
+              <p class="other-projects__description">다른 프로젝트도 함께 살펴보세요.</p>
+            </div>
+            <div class="other-projects__nav" aria-label="Other projects controls">
+              <button type="button" class="other-projects__btn" data-carousel-prev aria-label="이전">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button type="button" class="other-projects__btn" data-carousel-next aria-label="다음">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </header>
+        </div>
+
+        <div class="other-projects__viewport">
+          <div class="other-projects__track" data-carousel-track>
+            <a href="project-arden.html" class="other-project reveal">
+              <div class="other-project__media">
+                <img src="images/arden-cover.png" alt="Arden 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">Arden</h3>
+              <p class="other-project__meta">Web Design · Branding · UI/UX</p>
+            </a>
+
+            <a href="project-book-planet.html" class="other-project reveal" style="--reveal-delay: 0.05s">
+              <div class="other-project__media">
+                <img src="images/book-planet-cover.png" alt="Book Planet 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">Book Planet</h3>
+              <p class="other-project__meta">Mobile App · UX/UI</p>
+            </a>
+
+            <a href="project-balancer.html" class="other-project reveal" style="--reveal-delay: 0.1s">
+              <div class="other-project__media">
+                <img src="images/balancer-cover.png" alt="Balancer 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">Balancer</h3>
+              <p class="other-project__meta">Mobile App · Product Design · UX/UI</p>
+            </a>
+
+            <a href="project-sweethome.html" class="other-project reveal" style="--reveal-delay: 0.15s">
+              <div class="other-project__media">
+                <img src="images/sweethome-cover.png" alt="스윗홈 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">스윗홈</h3>
+              <p class="other-project__meta">Mobile App · Healthcare · UX/UI</p>
+            </a>
+
+            <a href="project-story-of-travel.html" class="other-project reveal" style="--reveal-delay: 0.2s">
+              <div class="other-project__media">
+                <img src="images/story-of-travel-cover.png" alt="Story of Travel 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">Story of Travel</h3>
+              <p class="other-project__meta">Web Design · Travel · UX/UI</p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <a href="index.html" class="footer__logo-link" aria-label="홈">
+              <span class="brand brand--lg">
+                <span class="brand__name">Hankyeol Kim</span>
+                <span class="brand__role">Product Designer</span>
+              </span>
+            </a>
+          </div>
+          <div class="footer__columns">
+            <div class="footer__column">
+              <h3 class="footer__column-title">Quick Links</h3>
+              <a href="index.html#projects"   class="footer__link">Project</a>
+              <a href="index.html#about"      class="footer__link">About</a>
+              <a href="index.html#experience" class="footer__link">Experience</a>
+            </div>
+            <div class="footer__column">
+              <h3 class="footer__column-title">Contact</h3>
+              <a href="tel:+821041495133"           class="footer__link">+82 10 4149 5133</a>
+              <a href="mailto:sk41495133@gmail.com" class="footer__link">sk41495133@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__divider"></div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Story of Travel - Hankyeol Kim Portfolio</title>
+  <meta name="description" content="테마·계절·지역·인기 순위 기반으로 국내 여행지 사진을 탐색하고 업로드할 수 있도록 설계한 여행 웹서비스 프로젝트.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/webclip.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/project-detail.css">
+</head>
+<body>
+  <!--
+    TODO: 콘텐츠 작성 후 project-book-planet.html 의 섹션 구조
+    (overview / background / insight-solution / principles / user-flow / design-system / ui-design)
+    를 참고해 본문을 채우세요.
+  -->
+  <div class="page">
+    <header class="navbar" data-navbar>
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__logo-link" aria-label="홈">
+          <span class="brand">
+            <span class="brand__name">Hankyeol Kim</span>
+            <span class="brand__role">Product Designer</span>
+          </span>
+        </a>
+        <nav class="navbar__menu" data-navbar-menu aria-label="주요 메뉴">
+          <a href="index.html#projects"   class="navbar__link">Project</a>
+          <a href="index.html#about"      class="navbar__link">About</a>
+          <!-- <a href="index.html#experience" class="navbar__link">Experience</a> -->
+        </nav>
+        <button type="button" class="button button--navbar navbar__cta" data-contact-trigger>Contact</button>
+        <button type="button" class="navbar__toggle" data-navbar-toggle aria-label="메뉴 열기">
+          <span class="navbar__toggle-icon"><span></span></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="main project-detail" style="--project-primary: #525252;">
+      <section class="project-header">
+        <div class="project-header__top">
+          <div class="project-header__intro">
+            <div class="project-header__tags project-tags reveal">
+              <span class="project-tag">Web Design</span>
+              <span class="project-tag">Travel</span>
+              <span class="project-tag">UX/UI</span>
+            </div>
+            <h1 class="project-header__title reveal" style="--reveal-delay: 0.05s">Story of Travel</h1>
+            <p class="project-header__description reveal" style="--reveal-delay: 0.1s">
+              여행지 사진을 업로드하고, 테마·계절·지역·인기 순위 기반으로 국내 여행지를 탐색할 수 있도록 설계한 여행 사진 공유 웹사이트 프로젝트.
+            </p>
+          </div>
+
+          <div class="project-header__meta reveal" style="--reveal-delay: 0.15s">
+            <div class="project-meta__item">
+              <h6 class="project-meta__label">프로젝트 구분</h6>
+              <p class="project-meta__value">팀 프로젝트</p>
+            </div>
+            <div class="project-meta__item">
+              <h6 class="project-meta__label">팀 구성</h6>
+              <p class="project-meta__value">디자이너 1 · PM 1 · 개발자 4</p>
+            </div>
+            <div class="project-meta__item">
+              <h6 class="project-meta__label">담당 역할</h6>
+              <p class="project-meta__value">기획 30% · UX/UI 디자인 100%</p>
+            </div>
+            <div class="project-meta__item">
+              <h6 class="project-meta__label">작업 기간</h6>
+              <p class="project-meta__value">2024.03.12 - 2024.09</p>
+            </div>
+            <div class="project-meta__item">
+              <h6 class="project-meta__label">사용 툴</h6>
+              <p class="project-meta__value">Figma · Photoshop</p>
+            </div>
+          </div>
+        </div>
+
+        <figure class="project-header__media reveal" style="--reveal-delay: 0.2s">
+          <img src="images/story-of-travel-cover.png"
+               alt="Story of Travel 프로젝트 메인 비주얼"
+               class="project-header__image">
+        </figure>
+      </section>
+
+      <div class="project-content">
+        <!-- Overview -->
+        <section class="work-section reveal">
+          <header class="section-title">
+            <h2 class="section-title__en">Overview</h2>
+            <p class="section-title__ko">프로젝트 개요</p>
+          </header>
+          <p class="work-section__lede">
+            Story of Travel은 국내 여행지 사진을 중심으로 사용자가 새로운 장소를 발견하고, 마음에 드는 여행 스토리를 저장하거나 작가를 팔로우할 수 있는 웹 서비스입니다.
+            테마별, 계절별, 지역별 탐색 구조를 통해 사용자가 원하는 분위기와 목적에 맞는 여행지를 빠르게 찾을 수 있도록 설계했습니다.
+          </p>
+        </section>
+
+        <!-- Service Direction -->
+        <section class="work-section reveal">
+          <header class="section-title">
+            <h2 class="section-title__en">Service Direction</h2>
+            <p class="section-title__ko">서비스 방향</p>
+          </header>
+          <div class="brief-grid">
+            <article class="brief-card">
+              <span class="brief-card__index">01</span>
+              <h3 class="brief-card__title">문제 정의</h3>
+              <p class="brief-card__body">여행 전 장소를 찾을 때 정보가 흩어져 있어 분위기와 취향에 맞는 여행지를 한눈에 비교하기 어렵습니다.</p>
+            </article>
+            <article class="brief-card">
+              <span class="brief-card__index">02</span>
+              <h3 class="brief-card__title">서비스 방향</h3>
+              <p class="brief-card__body">사용자가 업로드한 여행 사진을 중심으로 테마, 계절, 지역, 인기 순위 기반 탐색 경험을 제공합니다.</p>
+            </article>
+            <article class="brief-card">
+              <span class="brief-card__index">03</span>
+              <h3 class="brief-card__title">핵심 구조</h3>
+              <p class="brief-card__body">홈 → 테마별 여행지 → 시즌별 스토리 → 지역별 스토리 → 스토리 상세 / 북마크 / 팔로우</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Core Features -->
+        <section class="work-section reveal">
+          <header class="section-title">
+            <h2 class="section-title__en">Core Features</h2>
+            <p class="section-title__ko">핵심 기능</p>
+          </header>
+          <div class="brief-grid brief-grid--4">
+            <article class="brief-card">
+              <h3 class="brief-card__title">테마별 여행지</h3>
+              <p class="brief-card__body">자연, 축제, 식도락 등 여러 테마를 선택해 취향에 맞는 여행 스토리를 탐색할 수 있도록 구성했습니다.</p>
+            </article>
+            <article class="brief-card">
+              <h3 class="brief-card__title">시즌별 스토리</h3>
+              <p class="brief-card__body">봄, 여름, 가을, 겨울 계절별 여행 사진을 모아볼 수 있도록 설계했습니다.</p>
+            </article>
+            <article class="brief-card">
+              <h3 class="brief-card__title">지역별 스토리</h3>
+              <p class="brief-card__body">사용자가 업로드할 때 등록한 지역 정보를 기반으로 지역별 여행 스토리를 탐색할 수 있도록 구성했습니다.</p>
+            </article>
+            <article class="brief-card">
+              <h3 class="brief-card__title">Best Story</h3>
+              <p class="brief-card__body">조회수와 좋아요 수를 기준으로 인기 여행 스토리를 순위 형태로 보여줍니다.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- UI Design (groups Home & Login → User & Archive as subsections) -->
+        <section class="work-section reveal">
+          <header class="section-title">
+            <h2 class="section-title__en">UI Design</h2>
+          </header>
+
+          <div class="subsection-stack">
+            <!-- Home & Login -->
+            <section class="work-section">
+              <header class="section-title section-title--sub">
+                <h3 class="section-title__en">홈 &amp; 로그인</h3>
+              </header>
+              <img src="images/sot-home-login.png" alt="메인 페이지와 로그인 / 회원가입 팝업 화면" class="section-image" loading="lazy">
+            </section>
+
+            <!-- Story Upload -->
+            <section class="work-section">
+              <header class="section-title section-title--sub">
+                <h3 class="section-title__en">스토리(이미지) 업로드</h3>
+              </header>
+              <img src="images/sot-upload.png" alt="스토리 업로드 팝업과 위치 입력 디테일" class="section-image" loading="lazy">
+            </section>
+
+            <!-- Story Detail Popup -->
+            <section class="work-section">
+              <header class="section-title section-title--sub">
+                <h3 class="section-title__en">스토리 디테일 팝업</h3>
+              </header>
+              <img src="images/sot-story-detail.png" alt="스토리 상세 팝업 화면" class="section-image" loading="lazy">
+            </section>
+
+            <!-- Themed Destinations -->
+            <section class="work-section">
+              <header class="section-title section-title--sub">
+                <h3 class="section-title__en">테마별 여행지</h3>
+              </header>
+              <img src="images/sot-themed.png" alt="테마별 여행지 화면" class="section-image" loading="lazy">
+            </section>
+
+            <!-- Seasonal Stories -->
+            <section class="work-section">
+              <header class="section-title section-title--sub">
+                <h3 class="section-title__en">시즌별 스토리</h3>
+              </header>
+              <img src="images/sot-seasonal.png" alt="시즌별 스토리 화면" class="section-image" loading="lazy">
+            </section>
+
+            <!-- Best Story -->
+            <section class="work-section">
+              <header class="section-title section-title--sub">
+                <h3 class="section-title__en">Best Story</h3>
+              </header>
+              <img src="images/sot-best.png" alt="Best Story 화면" class="section-image" loading="lazy">
+            </section>
+
+            <!-- Trending & Popular Authors -->
+            <section class="work-section">
+              <header class="section-title section-title--sub">
+                <h3 class="section-title__en">급상승 &amp; 인기작가</h3>
+              </header>
+              <div class="image-pair">
+                <img src="images/sot-trending.png" alt="급상승 페이지" class="section-image" loading="lazy">
+                <img src="images/sot-authors.png" alt="인기 작가 페이지" class="section-image" loading="lazy">
+              </div>
+            </section>
+
+            <!-- Author Profile & My Page -->
+            <section class="work-section">
+              <header class="section-title section-title--sub">
+                <h3 class="section-title__en">작가 프로필 &amp; 마이페이지</h3>
+              </header>
+              <div class="image-pair">
+                <img src="images/sot-author-profile.png" alt="작가 프로필 화면" class="section-image" loading="lazy">
+                <img src="images/sot-mypage.png" alt="마이 페이지 / 프로필 편집 화면" class="section-image" loading="lazy">
+              </div>
+            </section>
+
+            <!-- Bookmarks & Search Results -->
+            <section class="work-section">
+              <header class="section-title section-title--sub">
+                <h3 class="section-title__en">북마크 &amp; 검색결과</h3>
+              </header>
+              <div class="image-pair">
+                <img src="images/sot-bookmark.png" alt="북마크 페이지" class="section-image" loading="lazy">
+                <img src="images/sot-search.png" alt="검색결과 페이지" class="section-image" loading="lazy">
+              </div>
+            </section>
+
+            <!-- Regional Stories & Following -->
+            <section class="work-section">
+              <header class="section-title section-title--sub">
+                <h3 class="section-title__en">지역별 스토리 &amp; 팔로잉 목록</h3>
+              </header>
+              <div class="image-pair">
+                <img src="images/sot-regional.png" alt="지역별 스토리 화면" class="section-image" loading="lazy">
+                <img src="images/sot-following.png" alt="팔로잉 목록 화면" class="section-image" loading="lazy">
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <!-- UI Components -->
+        <section class="work-section reveal">
+          <header class="section-title">
+            <h2 class="section-title__en">UI Components</h2>
+          </header>
+          <img src="images/sot-components.png" alt="이용약관, 개인정보 취급방침, 이메일·비밀번호 찾기, 비밀번호 변경, 팔로우 취소, 회원가입 등 팝업 컴포넌트 모음" class="section-image" loading="lazy">
+        </section>
+
+        <!-- Design System -->
+        <section class="work-section reveal">
+          <header class="section-title">
+            <h2 class="section-title__en">Design System</h2>
+            <p class="section-title__ko">디자인 시스템</p>
+          </header>
+          <ul class="spec-list">
+            <li class="spec-list__row">
+              <span class="spec-list__label">Logo Typeface</span>
+              <span class="spec-list__value">Pacifico</span>
+            </li>
+            <li class="spec-list__row">
+              <span class="spec-list__label">Typeface</span>
+              <span class="spec-list__value">Noto Sans KR</span>
+            </li>
+            <li class="spec-list__row">
+              <span class="spec-list__label">UI Style</span>
+              <span class="spec-list__value">Rounded Card UI</span>
+            </li>
+            <li class="spec-list__row">
+              <span class="spec-list__label">Color Direction</span>
+              <span class="spec-list__value">콘텐츠 집중을 위한 무채색 중심 UI</span>
+            </li>
+            <li class="spec-list__row">
+              <span class="spec-list__label">Icon Style</span>
+              <span class="spec-list__value">오픈소스 3D 아이콘</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- PDF CTA (TEMPORARILY HIDDEN — uncomment the block below
+             once the PDF link is ready.) -->
+        <!--
+        <section class="work-cta reveal">
+          <header class="section-title">
+            <h2 class="section-title__en">Full Case Study</h2>
+            <p class="section-title__ko">자세히 보기</p>
+          </header>
+          <p class="work-cta__body">
+            자세한 기획 과정과 전체 화면 설계는 PDF 포트폴리오에서 확인할 수 있습니다.
+          </p>
+          <a href="#" class="button" target="_blank" rel="noopener">View Full PDF</a>
+        </section>
+        -->
+      </div>
+
+      <section class="other-projects" data-carousel>
+        <div class="other-projects__container">
+          <header class="other-projects__header reveal">
+            <div class="other-projects__intro">
+              <h2 class="other-projects__title">Other Projects</h2>
+              <p class="other-projects__description">다른 프로젝트도 함께 살펴보세요.</p>
+            </div>
+            <div class="other-projects__nav" aria-label="Other projects controls">
+              <button type="button" class="other-projects__btn" data-carousel-prev aria-label="이전">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button type="button" class="other-projects__btn" data-carousel-next aria-label="다음">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </header>
+        </div>
+
+        <div class="other-projects__viewport">
+          <div class="other-projects__track" data-carousel-track>
+            <a href="project-clarix.html" class="other-project reveal">
+              <div class="other-project__media">
+                <img src="images/clarix-cover.png" alt="Clarix 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">Clarix</h3>
+              <p class="other-project__meta">Web Design · B2B SaaS · UX/UI</p>
+            </a>
+
+            <a href="project-arden.html" class="other-project reveal">
+              <div class="other-project__media">
+                <img src="images/arden-cover.png" alt="Arden 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">Arden</h3>
+              <p class="other-project__meta">Web Design · Branding · UI/UX</p>
+            </a>
+
+            <a href="project-book-planet.html" class="other-project reveal">
+              <div class="other-project__media">
+                <img src="images/book-planet-cover.png" alt="Book Planet 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">Book Planet</h3>
+              <p class="other-project__meta">Mobile App · UX/UI</p>
+            </a>
+
+            <a href="project-balancer.html" class="other-project reveal" style="--reveal-delay: 0.05s">
+              <div class="other-project__media">
+                <img src="images/balancer-cover.png" alt="Balancer 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">Balancer</h3>
+              <p class="other-project__meta">Mobile App · Product Design · UX/UI</p>
+            </a>
+
+            <a href="project-sweethome.html" class="other-project reveal" style="--reveal-delay: 0.1s">
+              <div class="other-project__media">
+                <img src="images/sweethome-cover.png" alt="스윗홈 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">스윗홈</h3>
+              <p class="other-project__meta">Mobile App · Healthcare · UX/UI</p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <a href="index.html" class="footer__logo-link" aria-label="홈">
+              <span class="brand brand--lg">
+                <span class="brand__name">Hankyeol Kim</span>
+                <span class="brand__role">Product Designer</span>
+              </span>
+            </a>
+          </div>
+          <div class="footer__columns">
+            <div class="footer__column">
+              <h3 class="footer__column-title">Quick Links</h3>
+              <a href="index.html#projects"   class="footer__link">Project</a>
+              <a href="index.html#about"      class="footer__link">About</a>
+              <a href="index.html#experience" class="footer__link">Experience</a>
+            </div>
+            <div class="footer__column">
+              <h3 class="footer__column-title">Contact</h3>
+              <a href="tel:+821041495133"           class="footer__link">+82 10 4149 5133</a>
+              <a href="mailto:sk41495133@gmail.com" class="footer__link">sk41495133@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__divider"></div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

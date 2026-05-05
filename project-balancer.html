@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Balancer - Hankyeol Kim Portfolio</title>
+  <meta name="description" content="식단 기록을 바탕으로 영양 밸런스를 분석하고, 필요한 식품과 맞춤 영양 음료를 제안하는 앱·제품 디자인 프로젝트.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/webclip.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/project-detail.css">
+</head>
+<body>
+  <!--
+    TODO: 콘텐츠 작성 후 project-book-planet.html 의 섹션 구조
+    (overview / background / insight-solution / principles / user-flow / design-system / ui-design)
+    를 참고해 본문을 채우세요.
+  -->
+  <div class="page">
+    <header class="navbar" data-navbar>
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__logo-link" aria-label="홈">
+          <span class="brand">
+            <span class="brand__name">Hankyeol Kim</span>
+            <span class="brand__role">Product Designer</span>
+          </span>
+        </a>
+        <nav class="navbar__menu" data-navbar-menu aria-label="주요 메뉴">
+          <a href="index.html#projects"   class="navbar__link">Project</a>
+          <a href="index.html#about"      class="navbar__link">About</a>
+          <!-- <a href="index.html#experience" class="navbar__link">Experience</a> -->
+        </nav>
+        <button type="button" class="button button--navbar navbar__cta" data-contact-trigger>Contact</button>
+        <button type="button" class="navbar__toggle" data-navbar-toggle aria-label="메뉴 열기">
+          <span class="navbar__toggle-icon"><span></span></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="main project-detail" style="--project-primary: #FF552D;">
+      <section class="project-header">
+        <div class="project-header__top">
+          <div class="project-header__intro">
+            <div class="project-header__tags project-tags reveal">
+              <span class="project-tag">Mobile App</span>
+              <span class="project-tag">Product Design</span>
+              <span class="project-tag">UX/UI</span>
+            </div>
+            <h1 class="project-header__title reveal" style="--reveal-delay: 0.05s">Balancer</h1>
+            <p class="project-header__description reveal" style="--reveal-delay: 0.1s">
+              식단 기록을 바탕으로 영양 밸런스를 분석하고, 필요한 식품과 맞춤 영양 음료를 제안하는 앱·제품 디자인 프로젝트.
+            </p>
+          </div>
+
+          <div class="project-header__meta reveal" style="--reveal-delay: 0.15s">
+            <div class="project-meta__item">
+              <h6 class="project-meta__label">프로젝트 구분</h6>
+              <p class="project-meta__value">개인 프로젝트</p>
+            </div>
+            <div class="project-meta__item">
+              <h6 class="project-meta__label">담당 역할</h6>
+              <p class="project-meta__value">기획 · UX/UI 디자인 · 제품 디자인</p>
+            </div>
+            <div class="project-meta__item">
+              <h6 class="project-meta__label">작업 기간</h6>
+              <p class="project-meta__value">2024.04 - 2024.09</p>
+            </div>
+            <div class="project-meta__item">
+              <h6 class="project-meta__label">사용 툴</h6>
+              <p class="project-meta__value">Figma · Photoshop · Rhino 8 · KeyShot</p>
+            </div>
+          </div>
+        </div>
+
+        <figure class="project-header__media reveal" style="--reveal-delay: 0.2s; border-radius: 0;">
+          <img src="images/balancer-hero.png"
+               alt="Balancer 프로젝트 메인 비주얼"
+               class="project-header__image">
+        </figure>
+      </section>
+
+      <div class="project-content">
+        <!-- Overview -->
+        <section class="work-section reveal">
+          <header class="section-title">
+            <h2 class="section-title__en">Overview</h2>
+            <p class="section-title__ko">프로젝트 개요</p>
+          </header>
+          <p class="work-section__lede">
+            Balancer는 사용자의 신체 정보와 식단 기록을 바탕으로 영양 상태를 분석하고, 필요한 식품과 맞춤 영양 음료를 제안하는 서비스입니다.
+            앱에서는 식단 기록, 영양 밸런스 진단, 추천 식품 탐색을 제공하고, 제품 디자인에서는 앱과 연동되는 영양 음료 디스펜서를 제안했습니다.
+          </p>
+        </section>
+
+        <!-- Problem & Direction -->
+        <section class="work-section reveal">
+          <header class="section-title">
+            <h2 class="section-title__en">Problem &amp; Direction</h2>
+            <p class="section-title__ko">문제 정의와 방향</p>
+          </header>
+          <p class="work-section__lede">
+            Balancer는 단순한 식단 기록 앱이 아니라, 사용자의 식단 데이터를 바탕으로 영양 상태를 분석하고 식품 추천과 제품 경험까지 연결하는 서비스로 기획했습니다.
+          </p>
+          <div class="brief-grid">
+            <article class="brief-card">
+              <span class="brief-card__index">01</span>
+              <h3 class="brief-card__title">문제 정의</h3>
+              <p class="brief-card__body">영양 정보는 복잡하고 개인마다 필요한 기준이 달라, 사용자가 자신의 영양 상태를 쉽게 파악하기 어렵습니다.</p>
+            </article>
+
+            <article class="brief-card">
+              <span class="brief-card__index">02</span>
+              <h3 class="brief-card__title">서비스 방향</h3>
+              <p class="brief-card__body">식단 기록을 바탕으로 부족하거나 과한 영양소를 분석하고, 필요한 식품과 제품 경험으로 연결합니다.</p>
+            </article>
+
+            <article class="brief-card">
+              <span class="brief-card__index">03</span>
+              <h3 class="brief-card__title">핵심 구조</h3>
+              <p class="brief-card__body">기록하기 → 진단하기 → 추천식품 → 맞춤 영양 음료 제조</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- App Design -->
+        <section class="work-section reveal">
+          <header class="section-title">
+            <h2 class="section-title__en">App Design</h2>
+            <p class="section-title__ko">앱 디자인</p>
+          </header>
+          <p class="work-section__lede">
+            식단 기록, 영양 진단, 추천 식품 탐색을 중심으로 사용자가 자신의 영양 상태를 쉽게 확인하고 개선할 수 있도록 설계했습니다.
+          </p>
+          <div class="image-stack">
+            <article class="image-block">
+              <img src="images/balancer-app-onboarding.png" alt="온보딩 - 회원가입, 기본 정보, 신체 정보, 건강 상태 입력 화면" class="image-block__image" loading="lazy">
+              <h3 class="image-block__title">온보딩</h3>
+              <p class="image-block__body">회원가입부터 신체·건강 정보 입력까지, 개인 맞춤 영양 분석에 필요한 정보를 단계적으로 수집하는 흐름을 설계했습니다.</p>
+            </article>
+
+            <article class="image-block">
+              <img src="images/balancer-app-home-record.png" alt="홈과 식단 기록 화면" class="image-block__image" loading="lazy">
+              <h3 class="image-block__title">홈 &amp; 식단 기록</h3>
+              <p class="image-block__body">홈 화면에서 오늘의 영양 상태를 한눈에 확인하고, 사진 기반으로 빠르게 식단을 기록할 수 있도록 설계했습니다.</p>
+            </article>
+
+            <article class="image-block">
+              <img src="images/balancer-app-diagnosis.png" alt="내 영양 밸런스와 영양정보 알아보기 화면" class="image-block__image" loading="lazy">
+              <h3 class="image-block__title">내 영양 밸런스 &amp; 영양 정보</h3>
+              <p class="image-block__body">내 정보와 식단을 분석해 영양 밸런스를 한눈에 보여주고, 각 영양소의 정보와 부족할 때 생길 수 있는 문제점을 간단히 알려줍니다.</p>
+            </article>
+
+            <article class="image-block">
+              <img src="images/balancer-app-recommend.png" alt="내게 필요한 영양소와 영양소별 추천 식품 화면" class="image-block__image" loading="lazy">
+              <h3 class="image-block__title">추천 식품 &amp; 영양 정보</h3>
+              <p class="image-block__body">사용자의 몸 상태에 따라 지금 필요한 영양소를 안내하고, 영양소별 추천 식품과 각 음식의 칼로리·성분·비슷한 식품 정보까지 한 곳에서 탐색할 수 있도록 설계했습니다.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Product Design -->
+        <section class="work-section reveal">
+          <header class="section-title">
+            <h2 class="section-title__en">Product Design</h2>
+            <p class="section-title__ko">제품 디자인</p>
+          </header>
+          <p class="work-section__lede">
+            앱에서 분석한 영양 상태를 바탕으로, 사용자에게 필요한 영양 음료를 제조하는 디스펜서 제품을 함께 제안했습니다.
+          </p>
+          <div class="image-split">
+            <article class="image-block">
+              <img src="images/balancer-product-dispenser.png" alt="Balancer 영양 음료 디스펜서 제품 디자인" class="image-block__image" loading="lazy">
+              <h3 class="image-block__title">Balancer 영양 음료 디스펜서</h3>
+              <p class="image-block__body">영양 파우더 카트리지를 기반으로 사용자에게 필요한 영양 음료를 제조하는 디스펜서. 미니멀한 폼팩터와 패키지 시스템을 함께 디자인했습니다.</p>
+            </article>
+
+            <article class="image-block">
+              <img src="images/balancer-product-app.png" alt="제품 관리 및 주문 앱 화면" class="image-block__image" loading="lazy">
+              <h3 class="image-block__title">제품 관리 &amp; 주문 앱 UI</h3>
+              <p class="image-block__body">디스펜서와 연결된 영양 파우더 관리, 음료 제조 흐름, 그리고 마켓에서의 추가 구매까지 한 곳에서 처리할 수 있도록 앱 UI를 설계했습니다.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Design System -->
+        <section class="work-section reveal">
+          <header class="section-title">
+            <h2 class="section-title__en">Design System</h2>
+            <p class="section-title__ko">디자인 시스템</p>
+          </header>
+          <p class="work-section__lede">
+            오렌지 컬러를 중심으로 활력 있고 긍정적인 인상을 만들고, 라운드 카드 UI를 사용해 정보 영역을 명확하게 구분했습니다.
+          </p>
+          <ul class="spec-list">
+            <li class="spec-list__row">
+              <span class="spec-list__label">Primary Color</span>
+              <span class="spec-list__value">
+                <span class="spec-color-chip" style="--swatch: #FF552D;"></span>
+                #FF552D
+              </span>
+            </li>
+            <li class="spec-list__row">
+              <span class="spec-list__label">Sub Color</span>
+              <span class="spec-list__value">
+                <span class="spec-color-chip" style="--swatch: #EEF0FF;"></span>
+                #EEF0FF
+              </span>
+            </li>
+            <li class="spec-list__row">
+              <span class="spec-list__label">Typeface</span>
+              <span class="spec-list__value">Noto Sans KR · Outfit</span>
+            </li>
+            <li class="spec-list__row">
+              <span class="spec-list__label">Device</span>
+              <span class="spec-list__value">iOS 375 × 812</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- PDF CTA (TEMPORARILY HIDDEN — uncomment the block below
+             once the PDF link is ready.) -->
+        <!--
+        <section class="work-cta reveal">
+          <header class="section-title">
+            <h2 class="section-title__en">Full Case Study</h2>
+            <p class="section-title__ko">자세히 보기</p>
+          </header>
+          <p class="work-cta__body">
+            자세한 UX 과정과 제품 설계는 PDF 포트폴리오에서 확인할 수 있습니다.
+          </p>
+          <a href="#" class="button" target="_blank" rel="noopener">View Full PDF</a>
+        </section>
+        -->
+
+      </div>
+
+      <section class="other-projects" data-carousel>
+        <div class="other-projects__container">
+          <header class="other-projects__header reveal">
+            <div class="other-projects__intro">
+              <h2 class="other-projects__title">Other Projects</h2>
+              <p class="other-projects__description">다른 프로젝트도 함께 살펴보세요.</p>
+            </div>
+            <div class="other-projects__nav" aria-label="Other projects controls">
+              <button type="button" class="other-projects__btn" data-carousel-prev aria-label="이전">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button type="button" class="other-projects__btn" data-carousel-next aria-label="다음">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </header>
+        </div>
+
+        <div class="other-projects__viewport">
+          <div class="other-projects__track" data-carousel-track>
+            <a href="project-clarix.html" class="other-project reveal">
+              <div class="other-project__media">
+                <img src="images/clarix-cover.png" alt="Clarix 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">Clarix</h3>
+              <p class="other-project__meta">Web Design · B2B SaaS · UX/UI</p>
+            </a>
+
+            <a href="project-arden.html" class="other-project reveal">
+              <div class="other-project__media">
+                <img src="images/arden-cover.png" alt="Arden 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">Arden</h3>
+              <p class="other-project__meta">Web Design · Branding · UI/UX</p>
+            </a>
+
+            <a href="project-book-planet.html" class="other-project reveal">
+              <div class="other-project__media">
+                <img src="images/book-planet-cover.png" alt="Book Planet 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">Book Planet</h3>
+              <p class="other-project__meta">Mobile App · UX/UI</p>
+            </a>
+
+            <a href="project-sweethome.html" class="other-project reveal" style="--reveal-delay: 0.05s">
+              <div class="other-project__media">
+                <img src="images/sweethome-cover.png" alt="스윗홈 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">스윗홈</h3>
+              <p class="other-project__meta">Mobile App · Healthcare · UX/UI</p>
+            </a>
+
+            <a href="project-story-of-travel.html" class="other-project reveal" style="--reveal-delay: 0.1s">
+              <div class="other-project__media">
+                <img src="images/story-of-travel-cover.png" alt="Story of Travel 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">Story of Travel</h3>
+              <p class="other-project__meta">Web Design · Travel · UX/UI</p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <a href="index.html" class="footer__logo-link" aria-label="홈">
+              <span class="brand brand--lg">
+                <span class="brand__name">Hankyeol Kim</span>
+                <span class="brand__role">Product Designer</span>
+              </span>
+            </a>
+          </div>
+          <div class="footer__columns">
+            <div class="footer__column">
+              <h3 class="footer__column-title">Quick Links</h3>
+              <a href="index.html#projects"   class="footer__link">Project</a>
+              <a href="index.html#about"      class="footer__link">About</a>
+              <a href="index.html#experience" class="footer__link">Experience</a>
+            </div>
+            <div class="footer__column">
+              <h3 class="footer__column-title">Contact</h3>
+              <a href="tel:+821041495133"           class="footer__link">+82 10 4149 5133</a>
+              <a href="mailto:sk41495133@gmail.com" class="footer__link">sk41495133@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__divider"></div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Book Planet - Hankyeol Kim Portfolio</title>
+  <meta name="description" content="지역 기반 탐색과 거래 설계로 중고 도서 거래의 사용성을 개선하는 UX/UI 프로젝트.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/webclip.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/project-detail.css">
+</head>
+<body>
+  <div class="page">
+    <!-- ============================
+         Navbar
+         ============================ -->
+    <header class="navbar" data-navbar>
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__logo-link" aria-label="홈">
+          <span class="brand">
+            <span class="brand__name">Hankyeol Kim</span>
+            <span class="brand__role">Product Designer</span>
+          </span>
+        </a>
+
+        <nav class="navbar__menu" data-navbar-menu aria-label="주요 메뉴">
+          <a href="index.html#projects"  class="navbar__link">Project</a>
+          <a href="index.html#about"     class="navbar__link">About</a>
+          <!-- <a href="index.html#experience" class="navbar__link">Experience</a> -->
+        </nav>
+        <button type="button" class="button button--navbar navbar__cta" data-contact-trigger>Contact</button>
+
+        <button type="button" class="navbar__toggle" data-navbar-toggle aria-label="메뉴 열기">
+          <span class="navbar__toggle-icon"><span></span></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="main project-detail">
+      <!-- ============================
+           Project header
+           ============================ -->
+      <section class="project-header">
+        <div class="project-header__top">
+          <div class="project-header__intro">
+            <div class="project-header__tags project-tags reveal">
+              <span class="project-tag">Mobile App</span>
+              <span class="project-tag">UX/UI</span>
+            </div>
+            <h1 class="project-header__title reveal" style="--reveal-delay: 0.05s">Book Planet</h1>
+            <p class="project-header__description reveal" style="--reveal-delay: 0.1s">
+              지역 기반 탐색과 거래 설계로 중고 도서 거래의 사용성을 개선하는 UX/UI 프로젝트.
+            </p>
+          </div>
+
+          <div class="project-header__meta reveal" style="--reveal-delay: 0.15s">
+            <div class="project-meta__item">
+              <h6 class="project-meta__label">프로젝트 구분</h6>
+              <p class="project-meta__value">개인 프로젝트</p>
+            </div>
+            <div class="project-meta__item">
+              <h6 class="project-meta__label">프로젝트 역할</h6>
+              <p class="project-meta__value">UX 리서치 · UI 디자인 · 프로토타이핑</p>
+            </div>
+            <div class="project-meta__item">
+              <h6 class="project-meta__label">작업 범위</h6>
+              <p class="project-meta__value">문제 정의 · 사용자 흐름 설계 · 화면 설계 · 프로토타입 제작</p>
+            </div>
+            <div class="project-meta__item">
+              <h6 class="project-meta__label">사용 툴</h6>
+              <p class="project-meta__value">Figma · Photoshop</p>
+            </div>
+          </div>
+        </div>
+
+        <figure class="project-header__media reveal" style="--reveal-delay: 0.2s">
+          <img src="images/book-planet-cover.png"
+               alt="Book Planet — 홈 / 내 근처 책 / 채팅 화면 컴포지션"
+               class="project-header__image">
+        </figure>
+      </section>
+
+      <!-- ============================
+           Body
+           ============================ -->
+      <div class="project-content">
+
+        <!-- Overview ------------------------------------------------ -->
+        <section class="overview reveal" aria-labelledby="overview-title">
+          <div class="overview__contents">
+            <div class="overview__media">
+              <img src="images/book-planet-overview.png" alt="Book Planet 홈 화면 — 내 근처 책 영역">
+            </div>
+
+            <div class="overview__body">
+              <header class="overview__head">
+                <p class="overview__label">Project Overview</p>
+                <h2 class="overview__title" id="overview-title">프로젝트 개요</h2>
+                <p class="overview__lede">
+                  지역 기반 탐색과 거래 설계로 중고 도서 거래의 사용성을 개선한 UX/UI 프로젝트
+                </p>
+              </header>
+
+              <div class="overview__highlights">
+                <article class="overview-card">
+                  <p class="overview-card__label">핵심 문제</p>
+                  <p class="overview-card__copy">
+                    중고 도서 거래는 접근성과 신뢰 문제로 일상적인 사용이 어렵다.
+                  </p>
+                </article>
+
+                <article class="overview-card">
+                  <p class="overview-card__label">해결 방향</p>
+                  <ul class="overview-card__list">
+                    <li>위치 기반 탐색으로 실제 거래 가능성에 집중</li>
+                    <li>거래 전 판단에 필요한 정보 구조화</li>
+                    <li>채팅 중심의 빠른 거래 흐름 설계</li>
+                  </ul>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Project Direction (Background + Approach + Principles unified) -->
+        <section class="project-direction reveal" aria-labelledby="project-direction-title">
+          <header class="project-direction__head">
+            <p class="project-direction__label">Background &amp; Strategy</p>
+            <h2 class="project-direction__title" id="project-direction-title">Project Direction</h2>
+            <p class="project-direction__intro">
+              공공 도서관은 접근성과 이용 시간에 한계가 있고, 개인이 소유한 책은 읽힌 뒤 활용되지 못한 채 방치되는 경우가 많습니다.
+              Bookplanet은 가까운 지역 안에서 개인과 개인이 책을 나누고 빌릴 수 있도록 연결해, 책의 순환을 더 쉽고 가볍게 만드는 서비스로 기획했습니다.
+            </p>
+          </header>
+
+          <div class="project-direction__body">
+            <!-- Left: Problem → Insight → Direction -->
+            <ol class="direction-flow" aria-label="Problem to direction">
+              <li class="direction-step">
+                <span class="direction-step__index">01</span>
+                <h3 class="direction-step__heading">Problem</h3>
+                <p class="direction-step__copy">공공 도서관은 시간, 거리, 이용 조건의 제약으로 접근성이 제한됩니다.</p>
+              </li>
+              <li class="direction-step">
+                <span class="direction-step__index">02</span>
+                <h3 class="direction-step__heading">Insight</h3>
+                <p class="direction-step__copy">책은 존재하지만 필요한 사람에게 자연스럽게 이동하지 못합니다.</p>
+              </li>
+              <li class="direction-step direction-step--accent">
+                <span class="direction-step__index">03</span>
+                <h3 class="direction-step__heading">Direction</h3>
+                <p class="direction-step__copy">지역 기반으로 개인 간 책 대여와 나눔을 연결하는 순환 구조를 설계합니다.</p>
+              </li>
+            </ol>
+
+            <!-- Right: Design Principles 2x2 -->
+            <div class="direction-principles">
+              <ul class="direction-principles__grid">
+                <li class="direction-principle">
+                  <h4 class="direction-principle__title">Nearby First</h4>
+                  <p class="direction-principle__copy">가까운 거리 기반 탐색</p>
+                </li>
+                <li class="direction-principle">
+                  <h4 class="direction-principle__title">Flexible Exchange</h4>
+                  <p class="direction-principle__copy">대여와 구매 선택 가능</p>
+                </li>
+                <li class="direction-principle">
+                  <h4 class="direction-principle__title">Low Barrier</h4>
+                  <p class="direction-principle__copy">진입 장벽 최소화</p>
+                </li>
+                <li class="direction-principle">
+                  <h4 class="direction-principle__title">Circular Use</h4>
+                  <p class="direction-principle__copy">읽지 않는 책의 재사용</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- User Flow ----------------------------------------------- -->
+        <section class="user-flow reveal">
+          <header class="section-title">
+            <h2 class="section-title__en">User Flow</h2>
+            <p class="section-title__ko">유저 플로우</p>
+          </header>
+
+          <div class="user-flow__body">
+            <p class="user-flow__lead">사용자 거래 구조를 채팅 중심으로 설계</p>
+            <img src="images/user-flow.svg" alt="Book Planet user flow diagram" class="user-flow__diagram">
+          </div>
+        </section>
+
+        <!-- Design System ------------------------------------------- -->
+        <section class="design-system reveal" aria-labelledby="design-system-title">
+          <header class="design-system__head">
+            <p class="design-system__label">Design System</p>
+            <h2 class="design-system__title" id="design-system-title">디자인 시스템</h2>
+          </header>
+
+          <!-- Typography group -->
+          <article class="ds-group">
+            <header class="ds-group__head">
+              <h3 class="ds-group__heading">Typography</h3>
+              <p class="ds-group__lede">로고타입과 본문 타입 스케일을 정의합니다.</p>
+            </header>
+
+            <div class="ds-group__grid ds-group__grid--two">
+              <div class="ds-card">
+                <p class="ds-card__label">Logo Typeface</p>
+                <div class="ds-card__body ds-logo">
+                  <img src="images/Clarity-City.svg" alt="Clarity City logotype" width="95">
+                  <img src="images/Book-Planet-logo-black.svg" alt="Book Planet 로고" width="250">
+                </div>
+                <p class="ds-card__caption">Primary logotype for brand identity</p>
+              </div>
+
+              <div class="ds-card">
+                <p class="ds-card__label">Type Scale</p>
+                <div class="ds-card__body typo-pair">
+                  <div class="typo-pair__col">
+                    <p class="ds-subtle-label">영문 · 숫자</p>
+                    <p class="t-inter-semibold">Inter</p>
+                    <p class="t-inter-regular">Semibold / Medium / Regular</p>
+                    <div class="typo-sample">
+                      <p class="t-inter-20">BookPlanet 20px</p>
+                      <p class="t-inter-18">BookPlanet 18</p>
+                      <p class="t-inter-16">BookPlanet 16</p>
+                      <p class="t-inter-14">BookPlanet 14</p>
+                      <p class="t-inter-13">BookPlanet 13</p>
+                      <p class="t-inter-12">BookPlanet 12</p>
+                      <p class="t-body-line-height">Body / line-height 1.4</p>
+                    </div>
+                  </div>
+
+                  <div class="typo-pair__col">
+                    <p class="ds-subtle-label">한글</p>
+                    <p class="t-pretendard-semibold">Pretendard</p>
+                    <p class="t-pretendard-regular">Semibold / Medium / Regular</p>
+                    <div class="typo-sample">
+                      <p class="t-pretendard-20">프리텐다드 20px</p>
+                      <p class="t-pretendard-18">프리텐다드 18</p>
+                      <p class="t-pretendard-16">프리텐다드 16</p>
+                      <p class="t-pretendard-14">프리텐다드 14</p>
+                      <p class="t-pretendard-13">프리텐다드 13</p>
+                      <p class="t-pretendard-12">프리텐다드 12</p>
+                      <p class="t-body-line-height">Body / line-height 1.4</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Color group -->
+          <article class="ds-group">
+            <header class="ds-group__head">
+              <h3 class="ds-group__heading">Color</h3>
+              <p class="ds-group__lede">중립 그레이 스케일과 단일 브랜드 컬러로 절제된 시스템을 구성합니다.</p>
+            </header>
+
+            <div class="ds-group__grid ds-group__grid--two">
+              <div class="ds-card">
+                <p class="ds-card__label">Gray Scale</p>
+                <div class="ds-card__body ds-color-stack">
+                  <div class="ds-color-row">
+                    <p class="ds-subtle-label">본문 · 보조 텍스트</p>
+                    <img src="images/grayscale1.svg" alt="Gray scale palette 1">
+                  </div>
+                  <div class="ds-color-row">
+                    <p class="ds-subtle-label">보조 액션 · 링크 · 비활성화</p>
+                    <img src="images/grayscale2.svg" alt="Gray scale palette 2">
+                  </div>
+                </div>
+              </div>
+
+              <div class="ds-card">
+                <p class="ds-card__label">Brand Color</p>
+                <div class="ds-card__body ds-color-stack">
+                  <div class="ds-color-row">
+                    <p class="ds-subtle-label">주요 CTA · 강조 상태</p>
+                    <img src="images/brandcolor.svg" alt="Brand color palette">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Components group -->
+          <article class="ds-group">
+            <header class="ds-group__head">
+              <h3 class="ds-group__heading">Components</h3>
+              <p class="ds-group__lede">반복 사용되는 인터랙티브 컴포넌트의 기본 상태입니다.</p>
+            </header>
+
+            <div class="ds-group__grid ds-group__grid--three">
+              <div class="ds-card">
+                <p class="ds-card__label">Input Field</p>
+                <div class="ds-card__body">
+                  <p class="ds-subtle-label">Default</p>
+                  <input type="text" class="demo-input" placeholder="placeholder">
+                </div>
+              </div>
+
+              <div class="ds-card">
+                <p class="ds-card__label">Toggle</p>
+                <div class="ds-card__body">
+                  <p class="ds-subtle-label">Default</p>
+                  <div class="demo-toggle" data-toggle role="tablist">
+                    <button type="button" class="demo-toggle__option is-active" data-toggle-option role="tab">토글1</button>
+                    <button type="button" class="demo-toggle__option" data-toggle-option role="tab">토글2</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ds-card">
+                <p class="ds-card__label">Button</p>
+                <div class="ds-card__body ds-button-stack">
+                  <div>
+                    <p class="ds-subtle-label">Default</p>
+                    <button type="button" class="demo-button">Button</button>
+                  </div>
+                  <div>
+                    <p class="ds-subtle-label">Disabled</p>
+                    <button type="button" class="demo-button demo-button--disabled" disabled>Button</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- UI Design ----------------------------------------------- -->
+        <section class="ui-design reveal">
+          <header class="section-title">
+            <h2 class="section-title__en">UI Design</h2>
+            <p class="section-title__ko">UI 디자인</p>
+          </header>
+
+          <article class="ui-design__group">
+            <h3 class="ui-design__tag">Home &amp; Navigation</h3>
+            <img src="images/book-planet-home.png" alt="Book Planet 홈 화면 — 내 거래 / 내 근처 책 / 추천 영역" class="ui-design__image">
+          </article>
+
+          <article class="ui-design__group">
+            <h3 class="ui-design__tag">탐색</h3>
+            <img src="images/book-planet-exploration-list.png" alt="내 근처 책 리스트 화면" class="ui-design__image">
+            <img src="images/book-planet-exploration-detail.png" alt="도서 상세 페이지" class="ui-design__image">
+          </article>
+
+          <article class="ui-design__group">
+            <h3 class="ui-design__tag">채팅</h3>
+            <img src="images/book-planet-chat.png" alt="채팅 화면 — 거래 흐름" class="ui-design__image">
+          </article>
+
+          <article class="ui-design__group">
+            <h3 class="ui-design__tag">기타 페이지</h3>
+            <img src="images/book-planet-other-pages.png" alt="기타 페이지 UI — 내 책방 / 마이페이지 / 상품등록" class="ui-design__image">
+          </article>
+        </section>
+      </div>
+
+      <!-- ============================
+           Other Projects
+           ============================ -->
+      <section class="other-projects" data-carousel>
+        <div class="other-projects__container">
+          <header class="other-projects__header reveal">
+            <div class="other-projects__intro">
+              <h2 class="other-projects__title">Other Projects</h2>
+              <p class="other-projects__description">다른 프로젝트도 함께 살펴보세요.</p>
+            </div>
+            <div class="other-projects__nav" aria-label="Other projects controls">
+              <button type="button" class="other-projects__btn" data-carousel-prev aria-label="이전">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button type="button" class="other-projects__btn" data-carousel-next aria-label="다음">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </header>
+        </div>
+
+        <div class="other-projects__viewport">
+          <div class="other-projects__track" data-carousel-track>
+            <a href="project-clarix.html" class="other-project reveal">
+              <div class="other-project__media">
+                <img src="images/clarix-cover.png" alt="Clarix 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">Clarix</h3>
+              <p class="other-project__meta">Web Design · B2B SaaS · UX/UI</p>
+            </a>
+
+            <a href="project-arden.html" class="other-project reveal">
+              <div class="other-project__media">
+                <img src="images/arden-cover.png" alt="Arden 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">Arden</h3>
+              <p class="other-project__meta">Web Design · Branding · UI/UX</p>
+            </a>
+
+            <a href="project-balancer.html" class="other-project reveal">
+              <div class="other-project__media">
+                <img src="images/balancer-cover.png" alt="Balancer 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">Balancer</h3>
+              <p class="other-project__meta">Mobile App · Product Design · UX/UI</p>
+            </a>
+
+            <a href="project-sweethome.html" class="other-project reveal" style="--reveal-delay: 0.05s">
+              <div class="other-project__media">
+                <img src="images/sweethome-cover.png" alt="스윗홈 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">스윗홈</h3>
+              <p class="other-project__meta">Mobile App · Healthcare · UX/UI</p>
+            </a>
+
+            <a href="project-story-of-travel.html" class="other-project reveal" style="--reveal-delay: 0.1s">
+              <div class="other-project__media">
+                <img src="images/story-of-travel-cover.png" alt="Story of Travel 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">Story of Travel</h3>
+              <p class="other-project__meta">Web Design · Travel · UX/UI</p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================
+         Footer
+         ============================ -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <a href="index.html" class="footer__logo-link" aria-label="홈">
+              <span class="brand brand--lg">
+                <span class="brand__name">Hankyeol Kim</span>
+                <span class="brand__role">Product Designer</span>
+              </span>
+            </a>
+          </div>
+
+          <div class="footer__columns">
+            <div class="footer__column">
+              <h3 class="footer__column-title">Quick Links</h3>
+              <a href="index.html#projects"  class="footer__link">Project</a>
+              <a href="index.html#about"     class="footer__link">About</a>
+              <a href="index.html#experience" class="footer__link">Experience</a>
+            </div>
+            <div class="footer__column">
+              <h3 class="footer__column-title">Contact</h3>
+              <a href="tel:+821041495133"        class="footer__link">+82 10 4149 5133</a>
+              <a href="mailto:sk41495133@gmail.com" class="footer__link">sk41495133@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__divider"></div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

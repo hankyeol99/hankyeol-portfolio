@@ -1,0 +1,105 @@
+/* ==========================================================================
+   Page wrapper & containers
+   ========================================================================== */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* offset the fixed navbar */
+  padding-top: var(--navbar-height);
+}
+
+.main {
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: var(--max-width-page);
+  margin-inline: auto;
+}
+
+/* Inner padding wrapper used inside sections */
+.padding-x {
+  padding-inline: var(--container-padding-x);
+}
+
+@media (max-width: 991px) {
+  .padding-x { padding-inline: 32px; }
+}
+@media (max-width: 767px) {
+  .padding-x { padding-inline: 20px; }
+}
+
+/* Fluid container that bounds content width inside .padding-x */
+.container {
+  width: 100%;
+  max-width: var(--max-width-page);
+  margin-inline: auto;
+}
+
+.container-content {
+  width: 100%;
+  max-width: var(--max-width-content);
+  margin-inline: auto;
+}
+
+/* Section spacing */
+.section {
+  padding-block: 7rem;
+}
+
+@media (max-width: 991px) {
+  .section { padding-block: 5rem; }
+}
+@media (max-width: 767px) {
+  .section { padding-block: 3.5rem; }
+}
+
+/* ==========================================================================
+   Spacing utilities
+   ========================================================================== */
+
+.mt-tiny    { margin-top: var(--space-tiny); }
+.mt-xxs     { margin-top: var(--space-xxsmall); }
+.mt-xs      { margin-top: var(--space-xsmall); }
+.mt-sm      { margin-top: var(--space-small); }
+.mt-md      { margin-top: var(--space-medium); }
+.mt-lg      { margin-top: var(--space-large); }
+.mt-xl      { margin-top: var(--space-xlarge); }
+
+.mb-tiny    { margin-bottom: var(--space-tiny); }
+.mb-xxs     { margin-bottom: var(--space-xxsmall); }
+.mb-xs      { margin-bottom: var(--space-xsmall); }
+.mb-sm      { margin-bottom: var(--space-small); }
+.mb-md      { margin-bottom: var(--space-medium); }
+.mb-lg      { margin-bottom: var(--space-large); }
+.mb-xl      { margin-bottom: var(--space-xlarge); }
+
+/* ==========================================================================
+   Reveal animation (intersection-observer driven entrance)
+   ========================================================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stagger child reveals (set --reveal-delay on each child) */
+.reveal[style*="--reveal-delay"].is-visible {
+  transition-delay: var(--reveal-delay);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

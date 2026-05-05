@@ -115,10 +115,6 @@
 
 .design-preview__btn:hover { background-color: var(--color-gray-100); }
 .design-preview__btn:active { background-color: var(--color-gray-softer); }
-.design-preview__btn:disabled {
-  opacity: 0.35;
-  cursor: not-allowed;
-}
 
 .design-preview__btn svg {
   width: 18px;
@@ -208,6 +204,8 @@
   aspect-ratio: 4 / 3;
   border-radius: 8px;
   overflow: hidden;
+  outline: 1px solid #f2f2f2;
+  outline-offset: -1px;
 }
 
 .preview-card__image {

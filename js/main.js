@@ -92,6 +92,17 @@
     else img.addEventListener("load", apply);
   });
 
+  /* ---------- Design Preview: shuffle cards on each load ---------- */
+  const dpTrack = document.querySelector(".design-preview__track");
+  if (dpTrack) {
+    const items = Array.from(dpTrack.children);
+    for (let i = items.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [items[i], items[j]] = [items[j], items[i]];
+    }
+    items.forEach((item) => dpTrack.appendChild(item));
+  }
+
   /* ---------- Generic carousel: drag-to-scroll + arrow buttons ---------- */
   document.querySelectorAll("[data-carousel]").forEach((section) => {
     const track = section.querySelector("[data-carousel-track]");
@@ -139,30 +150,27 @@
       }
     }, true);
 
-    /* Arrow buttons -> scroll by one card width */
+    /* Arrow buttons -> scroll by one card width, looping at the edges */
     const scrollByCard = (dir) => {
       const card = track.firstElementChild;
       if (!card) return;
       const styles = getComputedStyle(track);
       const gap = parseFloat(styles.columnGap || styles.gap) || 0;
       const step = card.getBoundingClientRect().width + gap;
-      track.scrollBy({ left: dir * step, behavior: "smooth" });
+      const max = track.scrollWidth - track.clientWidth;
+      let target;
+      if (dir > 0 && track.scrollLeft >= max - 1) {
+        target = 0;
+      } else if (dir < 0 && track.scrollLeft <= 1) {
+        target = max;
+      } else {
+        target = track.scrollLeft + dir * step;
+      }
+      track.scrollTo({ left: target, behavior: "smooth" });
     };
 
     if (prev) prev.addEventListener("click", () => scrollByCard(-1));
     if (next) next.addEventListener("click", () => scrollByCard(1));
-
-    /* Update disabled state of arrow buttons */
-    const updateButtons = () => {
-      if (!prev || !next) return;
-      const max = track.scrollWidth - track.clientWidth;
-      prev.disabled = track.scrollLeft <= 1;
-      next.disabled = track.scrollLeft >= max - 1;
-    };
-
-    track.addEventListener("scroll", updateButtons, { passive: true });
-    window.addEventListener("resize", updateButtons);
-    updateButtons();
   });
 
   /* ---------- Project tag filter (home page) ---------- */

@@ -1317,10 +1317,6 @@
 
 .other-projects__btn:hover { background-color: var(--color-gray-100); }
 .other-projects__btn:active { background-color: var(--color-gray-softer); }
-.other-projects__btn:disabled {
-  opacity: 0.35;
-  cursor: not-allowed;
-}
 
 .other-projects__btn svg {
   width: 18px;

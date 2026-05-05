@@ -379,7 +379,7 @@
 }
 
 .footer__link--copy.is-copied {
-  background-color: var(--color-bookplanet-1, #5a57ff);
+  background-color: var(--color-black);
   color: var(--color-white);
 }
 

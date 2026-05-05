@@ -228,6 +228,42 @@
     }
   }
 
+  /* ---------- Footer copy-to-clipboard buttons ---------- */
+  const copyTextToClipboard = async (text) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      return true;
+    } catch {
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      let ok = false;
+      try { ok = document.execCommand("copy"); } catch {}
+      document.body.removeChild(ta);
+      return ok;
+    }
+  };
+
+  document.addEventListener("click", async (e) => {
+    const btn = e.target.closest("[data-copy]");
+    if (!btn) return;
+    e.preventDefault();
+    const text = btn.dataset.copy;
+    if (!text) return;
+    const original = btn.dataset.copyDefault || btn.textContent;
+    const ok = await copyTextToClipboard(text);
+    btn.textContent = ok ? "복사됨" : "복사 실패";
+    btn.classList.add("is-copied");
+    clearTimeout(btn._copyTimer);
+    btn._copyTimer = setTimeout(() => {
+      btn.textContent = original;
+      btn.classList.remove("is-copied");
+    }, 1400);
+  });
+
   /* ---------- Contact modal ---------- */
   const CONTACT_EMAIL = "sk41495133@gmail.com";
   const CONTACT_LINKEDIN = "https://www.linkedin.com/in/hankyeolkim";

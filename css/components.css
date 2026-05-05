@@ -351,9 +351,13 @@
 }
 
 .footer__column-title {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   padding-left: 0.75rem;
-  font-weight: var(--fw-semibold);
+  font-size: 12px;
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gray-400);
 }
 
 .footer__link {
@@ -361,11 +365,22 @@
   border-radius: var(--radius-pill);
   font-size: var(--fs-small);
   color: var(--color-black);
-  transition: background-color var(--duration-base) var(--ease);
+  transition: background-color var(--duration-base) var(--ease),
+              color var(--duration-base) var(--ease);
 }
 
 .footer__link:hover {
   background-color: var(--color-gray-softer);
+}
+
+.footer__link--copy {
+  text-align: left;
+  cursor: pointer;
+}
+
+.footer__link--copy.is-copied {
+  background-color: var(--color-bookplanet-1, #5a57ff);
+  color: var(--color-white);
 }
 
 .footer__divider {

@@ -279,6 +279,29 @@
   let contactModal = null;
   let lastFocusedTrigger = null;
 
+  const FORM_GROUPS = [
+    { name: "project-type", label: "어떤 작업이 필요하신가요?", required: true,
+      options: ["랜딩페이지", "회사 홈페이지", "브랜드 사이트", "기존 사이트 리디자인", "기타"] },
+    { name: "purpose", label: "웹사이트의 주된 목적은 무엇인가요?", required: true,
+      options: ["문의 증가", "서비스 소개", "브랜드 신뢰도 강화", "제품 판매", "광고 전환", "기타"] },
+    { name: "scope", label: "필요한 작업 범위", required: true,
+      options: ["디자인만", "디자인+개발", "기존 사이트 수정", "배포까지", "아직 모르겠음"] },
+    { name: "budget", label: "예상 예산 범위", required: true,
+      options: ["50만 원 이하", "50~100만 원", "100~200만 원", "200~300만 원", "300만 원 이상", "미정"] },
+    { name: "timeline", label: "희망 오픈 일정", required: true,
+      options: ["1주 이내", "2주 이내", "1개월 이내", "협의 가능"] },
+  ];
+
+  const renderChipGroup = (g, type) =>
+    `<div class="contact-modal__chip-group" role="${type === "radio" ? "radiogroup" : "group"}">
+      ${g.options.map((opt) => `
+        <label class="contact-modal__chip">
+          <input type="${type}" name="${g.name}" value="${opt}"${g.required && type === "radio" ? " required" : ""}>
+          <span>${opt}</span>
+        </label>
+      `).join("")}
+    </div>`;
+
   const buildContactModal = () => {
     const root = document.createElement("div");
     root.className = "contact-modal";
@@ -286,35 +309,49 @@
     root.setAttribute("aria-modal", "true");
     root.setAttribute("aria-labelledby", "contact-modal-title");
     root.setAttribute("aria-hidden", "true");
+
+    const radioFields = FORM_GROUPS.map((g) => `
+      <fieldset class="contact-modal__field">
+        <legend class="contact-modal__label">${g.label}${g.required ? ' <span class="contact-modal__req" aria-hidden="true">*</span>' : ""}</legend>
+        ${renderChipGroup(g, "radio")}
+      </fieldset>
+    `).join("");
+
+    const materials = { name: "materials", required: false,
+      options: ["로고", "브랜드 가이드", "텍스트", "이미지", "기존 사이트", "없음"] };
+
     root.innerHTML = `
       <div class="contact-modal__backdrop" data-contact-close></div>
-      <div class="contact-modal__panel">
+      <div class="contact-modal__panel contact-modal__panel--form">
         <button type="button" class="contact-modal__close" data-contact-close aria-label="닫기">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
           </svg>
         </button>
-        <h2 class="contact-modal__title" id="contact-modal-title">Contact</h2>
-        <p class="contact-modal__lede">메일 또는 LinkedIn으로 편하게 연락 주세요.</p>
-        <div class="contact-modal__email">
-          <span class="contact-modal__email-text" data-contact-email>${CONTACT_EMAIL}</span>
-          <button type="button" class="contact-modal__copy" data-contact-copy>복사</button>
-        </div>
-        <div class="contact-modal__actions">
-          <a href="${CONTACT_LINKEDIN}" target="_blank" rel="noopener noreferrer" class="contact-modal__btn contact-modal__btn--ghost">
-            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/>
-            </svg>
-            LinkedIn
-          </a>
-          <a href="mailto:${CONTACT_EMAIL}" class="contact-modal__btn contact-modal__btn--primary">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M4 6h16c.55 0 1 .45 1 1v10c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V7c0-.55.45-1 1-1z" stroke="currentColor" stroke-width="1.6"/>
-              <path d="M3.5 7L12 13L20.5 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            이메일 보내기
-          </a>
-        </div>
+        <h2 class="contact-modal__title" id="contact-modal-title">프로젝트 문의</h2>
+        <p class="contact-modal__lede">아래 정보를 알려주시면 1영업일 내 회신드립니다.</p>
+
+        <form class="contact-modal__form" data-contact-form novalidate>
+          ${radioFields}
+
+          <div class="contact-modal__field">
+            <label class="contact-modal__label" for="cm-reference">참고하고 싶은 사이트가 있다면 알려주세요</label>
+            <input id="cm-reference" name="reference" class="contact-modal__input" type="text" placeholder="URL 또는 간단한 설명" autocomplete="off">
+          </div>
+
+          <fieldset class="contact-modal__field">
+            <legend class="contact-modal__label">현재 준비된 자료가 있나요?</legend>
+            ${renderChipGroup(materials, "checkbox")}
+          </fieldset>
+
+          <div class="contact-modal__field">
+            <label class="contact-modal__label" for="cm-description">프로젝트에 대해 간단히 설명해주세요</label>
+            <textarea id="cm-description" name="description" class="contact-modal__textarea" rows="5" placeholder="현재 상황, 필요한 페이지, 원하는 분위기, 고민 중인 부분 등을 자유롭게 적어주세요."></textarea>
+          </div>
+
+          <button type="submit" class="contact-modal__submit">문의 보내기</button>
+          <p class="contact-modal__fineprint">또는 <a href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a> 으로 직접 연락 주세요.</p>
+        </form>
       </div>
     `;
     document.body.appendChild(root);
@@ -323,27 +360,32 @@
       if (e.target.closest("[data-contact-close]")) closeContactModal();
     });
 
-    const copyBtn = root.querySelector("[data-contact-copy]");
-    copyBtn.addEventListener("click", async () => {
-      try {
-        await navigator.clipboard.writeText(CONTACT_EMAIL);
-      } catch {
-        // Fallback for older browsers / non-secure contexts
-        const range = document.createRange();
-        range.selectNodeContents(root.querySelector("[data-contact-email]"));
-        const sel = window.getSelection();
-        sel.removeAllRanges();
-        sel.addRange(range);
-        try { document.execCommand("copy"); } catch {}
-        sel.removeAllRanges();
-      }
-      const original = copyBtn.textContent;
-      copyBtn.textContent = "복사됨";
-      copyBtn.classList.add("is-copied");
-      setTimeout(() => {
-        copyBtn.textContent = original;
-        copyBtn.classList.remove("is-copied");
-      }, 1500);
+    const form = root.querySelector("[data-contact-form]");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (!form.reportValidity()) return;
+
+      const data = new FormData(form);
+      const get = (k) => (data.get(k) || "").trim() || "-";
+      const getAll = (k) => data.getAll(k).join(", ") || "-";
+
+      const lines = [
+        `[작업 종류] ${get("project-type")}`,
+        `[웹사이트 목적] ${get("purpose")}`,
+        `[작업 범위] ${get("scope")}`,
+        `[예상 예산] ${get("budget")}`,
+        `[희망 오픈 일정] ${get("timeline")}`,
+        "",
+        `[참고 사이트] ${get("reference")}`,
+        `[준비된 자료] ${getAll("materials")}`,
+        "",
+        "[프로젝트 설명]",
+        get("description"),
+      ];
+
+      const subject = `[blinkdesign 문의] ${data.get("project-type") || ""}`.trim();
+      const body = lines.join("\n");
+      window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     });
 
     return root;

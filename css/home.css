@@ -204,8 +204,10 @@
   aspect-ratio: 4 / 3;
   border-radius: 8px;
   overflow: hidden;
+  /* outline sits just outside the rounded edge so it always reads against
+     the page background, regardless of the image's edge brightness. */
   outline: 1px solid #f2f2f2;
-  outline-offset: -1px;
+  outline-offset: 0;
 }
 
 .preview-card__image {
@@ -216,6 +218,13 @@
   object-position: center;
   transition: transform 0.5s var(--ease);
   pointer-events: none;    /* prevent native image drag from blocking the track drag */
+  /* Smooth high-quality downsampling on high-DPI displays to avoid the
+     jagged/aliased look that comes from large PNGs being shown small. */
+  image-rendering: auto;
+  image-rendering: -webkit-optimize-contrast; /* WebKit fallback */
+  image-rendering: high-quality;              /* Chrome 96+/Edge/Safari 15.4+ */
+  -ms-interpolation-mode: bicubic;
+  will-change: transform;                     /* hint GPU compositing */
 }
 
 .preview-card:hover .preview-card__image {
@@ -236,12 +245,16 @@
   .design-preview__title { font-size: 1.75rem; }
   .design-preview__nav { display: none; } /* native touch scroll on mobile */
 
-  .preview-card { flex: 0 0 55%; } /* 30% smaller than 78% */
+  /* Tablet: ~2.2 cards visible (was effectively 4 because the rule below
+     targeted the wrong element) */
+  .design-preview__track > li { flex: 0 0 44%; }
+  .preview-card__media { border-radius: 6px; }
 }
 
 @media (max-width: 479px) {
-  .preview-card { flex: 0 0 59%; } /* 30% smaller than 84% */
-  .preview-card__media { border-radius: 14px; }
+  /* Mobile: ~1.3 cards with a peek of the next card to invite scroll */
+  .design-preview__track > li { flex: 0 0 72%; }
+  .preview-card__media { border-radius: 5px; }
 }
 
 /* ==========================================================================

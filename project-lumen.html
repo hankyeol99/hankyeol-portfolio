@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Lumen Clinic - Hankyeol Kim Portfolio</title>
+  <meta name="description" content="따뜻한 빛이 머무는 작은 클리닉 Lumen Clinic의 브랜드 아이덴티티와 웹사이트를 함께 설계한 브랜딩·웹 디자인 개인 프로젝트.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/webclip.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/project-detail.css">
+</head>
+<body>
+  <div class="page">
+    <header class="navbar" data-navbar>
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__logo-link" aria-label="홈">
+          <span class="brand">
+            <span class="brand__name">Hankyeol Kim</span>
+            <span class="brand__role">Product Designer</span>
+          </span>
+        </a>
+        <nav class="navbar__menu" data-navbar-menu aria-label="주요 메뉴">
+          <a href="index.html#projects"   class="navbar__link">Project</a>
+          <a href="index.html#about"      class="navbar__link">About</a>
+          <!-- <a href="index.html#experience" class="navbar__link">Experience</a> -->
+        </nav>
+        <button type="button" class="button button--navbar navbar__cta" data-contact-trigger>Contact</button>
+        <button type="button" class="navbar__toggle" data-navbar-toggle aria-label="메뉴 열기">
+          <span class="navbar__toggle-icon"><span></span></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="main project-detail" style="--project-primary: #C49A57;">
+      <section class="project-header">
+        <div class="project-header__top">
+          <div class="project-header__intro">
+            <div class="project-header__tags project-tags reveal">
+              <span class="project-tag">Web Design</span>
+              <span class="project-tag">Branding</span>
+              <span class="project-tag">Healthcare</span>
+            </div>
+            <h1 class="project-header__title reveal" style="--reveal-delay: 0.05s">Lumen Clinic</h1>
+            <p class="project-header__description reveal" style="--reveal-delay: 0.1s">
+              따뜻한 빛이 머무는 작은 클리닉, Lumen Clinic의 브랜드 아이덴티티와 웹사이트를 함께 설계한 개인 프로젝트입니다.
+            </p>
+            <p class="project-header__cta reveal" style="--reveal-delay: 0.15s">
+              <a href="https://hankyeol99.github.io/LUMEN-CLINIC/" class="button" target="_blank" rel="noopener">웹사이트 바로 가기 →</a>
+            </p>
+          </div>
+
+          <div class="project-header__meta reveal" style="--reveal-delay: 0.2s">
+            <div class="project-meta__item">
+              <h6 class="project-meta__label">프로젝트 구분</h6>
+              <p class="project-meta__value">개인 프로젝트</p>
+            </div>
+            <div class="project-meta__item">
+              <h6 class="project-meta__label">담당 역할</h6>
+              <p class="project-meta__value">브랜드 아이덴티티 · 웹 디자인</p>
+            </div>
+            <div class="project-meta__item">
+              <h6 class="project-meta__label">작업 기간</h6>
+              <p class="project-meta__value">2026.06</p>
+            </div>
+            <div class="project-meta__item">
+              <h6 class="project-meta__label">사용 툴</h6>
+              <p class="project-meta__value">Figma · Claude Code · GPT Image</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="project-content">
+        <div class="image-stack">
+          <article class="image-block">
+            <h3 class="image-block__title">PC</h3>
+            <img src="images/lumen-website.png" alt="Lumen Clinic 웹사이트 - PC 화면" class="image-block__image" loading="lazy" style="border-radius: 0; margin: 0;">
+          </article>
+
+          <article class="image-block">
+            <h3 class="image-block__title">Mobile</h3>
+            <img src="images/lumen-website-mobile.png" alt="Lumen Clinic 웹사이트 - Mobile 화면" class="image-block__image" loading="lazy" style="border-radius: 0; margin: 0; width: 70%; align-self: center;">
+          </article>
+        </div>
+
+        <!-- Design System -->
+        <section class="work-section reveal">
+          <header class="section-title">
+            <h2 class="section-title__en">Design System</h2>
+            <p class="section-title__ko">디자인 시스템</p>
+          </header>
+          <ul class="spec-list">
+            <li class="spec-list__row">
+              <span class="spec-list__label">Neutral Palette</span>
+              <span class="spec-list__value">
+                <span class="spec-color-chip" style="--swatch: #FBFAF6;"></span>
+                <span class="spec-color-chip" style="--swatch: #F4EFE5;"></span>
+                <span class="spec-color-chip" style="--swatch: #E8DFCC;"></span>
+                <span class="spec-color-chip" style="--swatch: #C9BFA8;"></span>
+                <span class="spec-color-chip" style="--swatch: #8E8470;"></span>
+                <span style="margin-left: 8px;">Snow · Ivory · Cream · Sand · Stone</span>
+              </span>
+            </li>
+            <li class="spec-list__row">
+              <span class="spec-list__label">Accent</span>
+              <span class="spec-list__value">
+                <span class="spec-color-chip" style="--swatch: #C49A57;"></span>
+                <span class="spec-color-chip" style="--swatch: #8B6328;"></span>
+                <span style="margin-left: 8px;">Lumen Gold · Amber Deep</span>
+              </span>
+            </li>
+            <li class="spec-list__row">
+              <span class="spec-list__label">Text</span>
+              <span class="spec-list__value">
+                <span class="spec-color-chip" style="--swatch: #1F1A17;"></span>
+                <span class="spec-color-chip" style="--swatch: #5A5048;"></span>
+                <span style="margin-left: 8px;">Charcoal · Charcoal Soft</span>
+              </span>
+            </li>
+            <li class="spec-list__row">
+              <span class="spec-list__label">Typeface</span>
+              <span class="spec-list__value">Wanted Sans · Noto Serif KR · Reckless · Inter</span>
+            </li>
+            <li class="spec-list__row">
+              <span class="spec-list__label">Tech Stack</span>
+              <span class="spec-list__value">Vanilla HTML · CSS · JavaScript · Claude Code 사용</span>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="other-projects" data-carousel>
+        <div class="other-projects__container">
+          <header class="other-projects__header reveal">
+            <div class="other-projects__intro">
+              <h2 class="other-projects__title">Other Projects</h2>
+              <p class="other-projects__description">다른 프로젝트도 함께 살펴보세요.</p>
+            </div>
+            <div class="other-projects__nav" aria-label="Other projects controls">
+              <button type="button" class="other-projects__btn" data-carousel-prev aria-label="이전">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button type="button" class="other-projects__btn" data-carousel-next aria-label="다음">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </header>
+        </div>
+
+        <div class="other-projects__viewport">
+          <div class="other-projects__track" data-carousel-track>
+            <a href="project-norden.html" class="other-project reveal">
+              <div class="other-project__media">
+                <img src="images/norden-cover.png" alt="Norden Studio 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">Norden Studio</h3>
+              <p class="other-project__meta">Web Design · Branding · UX/UI</p>
+            </a>
+
+            <a href="project-arden.html" class="other-project reveal">
+              <div class="other-project__media">
+                <img src="images/arden-cover.png" alt="Arden 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">Arden</h3>
+              <p class="other-project__meta">Web Design · Branding · UX/UI</p>
+            </a>
+
+            <a href="project-clarix.html" class="other-project reveal">
+              <div class="other-project__media">
+                <img src="images/clarix-cover.png" alt="Clarix 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">Clarix</h3>
+              <p class="other-project__meta">Web Design · B2B SaaS · UX/UI</p>
+            </a>
+
+            <a href="project-book-planet.html" class="other-project reveal">
+              <div class="other-project__media">
+                <img src="images/book-planet-cover.png" alt="Book Planet 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">Book Planet</h3>
+              <p class="other-project__meta">Mobile App · UX/UI</p>
+            </a>
+
+            <a href="project-balancer.html" class="other-project reveal" style="--reveal-delay: 0.05s">
+              <div class="other-project__media">
+                <img src="images/balancer-cover.png" alt="Balancer 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">Balancer</h3>
+              <p class="other-project__meta">Mobile App · Product Design · UX/UI</p>
+            </a>
+
+            <a href="project-sweethome.html" class="other-project reveal" style="--reveal-delay: 0.1s">
+              <div class="other-project__media">
+                <img src="images/sweethome-cover.png" alt="스윗홈 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">스윗홈</h3>
+              <p class="other-project__meta">Mobile App · Healthcare · UX/UI</p>
+            </a>
+
+            <a href="project-story-of-travel.html" class="other-project reveal" style="--reveal-delay: 0.15s">
+              <div class="other-project__media">
+                <img src="images/story-of-travel-cover.png" alt="Story of Travel 프로젝트 미리보기" class="other-project__image" loading="lazy" draggable="false">
+              </div>
+              <h3 class="other-project__title">Story of Travel</h3>
+              <p class="other-project__meta">Web Design · Travel · UX/UI</p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <a href="index.html" class="footer__logo-link" aria-label="홈">
+              <span class="brand brand--lg">
+                <span class="brand__name">Hankyeol Kim</span>
+                <span class="brand__role">Product Designer</span>
+              </span>
+            </a>
+          </div>
+          <div class="footer__columns">
+            <div class="footer__column">
+              <h3 class="footer__column-title">Quick Links</h3>
+              <a href="index.html#projects"   class="footer__link">Project</a>
+              <a href="index.html#about"      class="footer__link">About</a>
+            </div>
+            <div class="footer__column">
+              <h3 class="footer__column-title">Contact</h3>
+              <button type="button" class="footer__link footer__link--copy" data-copy="+82 10 4149 5133" data-copy-default="+82 10 4149 5133">+82 10 4149 5133</button>
+              <button type="button" class="footer__link footer__link--copy" data-copy="sk41495133@gmail.com" data-copy-default="sk41495133@gmail.com">sk41495133@gmail.com</button>
+            </div>
+          </div>
+        </div>
+        <div class="footer__divider"></div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
